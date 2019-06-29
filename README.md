@@ -115,3 +115,44 @@ CTRL + Enter = run query
 Source plugins:
 e.g.
 `npm install --save gatsby-source-filesystem`
+
+```javascript
+//gatsby-config.js
+plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `src`,
+        path: `${__dirname}/src/`,
+      },
+    }
+  ]
+```
+
+## Documentation w Docz (mdx)
+`npm install --save gatsby-theme-docz docz docz-theme-default
+`
+
+```javascript
+gatsby-config.js
+module.exports = {
+  __experimentalThemes: [`gatsby-theme-docz`],
+  plugins: [`// your plugins go here`],
+}
+```
+
+```md
+docs/index.mdx
+---
+name: Getting Started
+route: /
+---
+
+# Getting Started
+
+## Hello world
+
+Type here the most beautyiful getting started that you ever saw!
+```
+
+Use a `doczrc.js` file for config
