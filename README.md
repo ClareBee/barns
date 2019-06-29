@@ -58,3 +58,60 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+
+
+## Styling
+CSS-modules
+
+Styled-Components
+```
+npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
+```
+
+```javascript
+// gatsby-config.js
+module.exports = {
+  plugins: [`gatsby-plugin-styled-components`],
+}
+```
+
+## Plugins
+e.g. Typography
+`npm install --save gatsby-plugin-typography react-typography typography typography-theme-fairy-gates
+`
+```javascript
+// gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
+  ],
+}
+```
+And a config file:
+```javascript
+// src/utils/typography.js
+import Typography from "typography"
+import fairyGateTheme from "typography-theme-fairy-gates"
+
+const typography = new Typography(fairyGateTheme)
+
+export const { scale, rhythm, options } = typography
+export default typography
+```
+
+## GraphQl
+- Page queries on page components
+- StaticQuery hooks on non-page components
+
+GraphiQL IDE
+`http://localhost:8000/___graphql`
+CTRL + Space = autocomplete popup
+CTRL + Enter = run query
+Source plugins:
+e.g.
+`npm install --save gatsby-source-filesystem`
