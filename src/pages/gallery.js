@@ -4,18 +4,23 @@ import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-class SecondPage extends React.Component {
+class Gallery extends React.Component {
   constructor(){
     super()
-
   }
   render(){
-    const images = this.props.data
+    const barns = this.props.data.allPostsJson.edges
+    console.log(barns)
     return (
       <Layout>
         <SEO title="Page two" />
         <h1>Hi from the second page</h1>
         <p>Welcome to page 2</p>
+        {barns.map(barn =>
+          <Img fluid={barn.node.image.src.childImageSharp.fluid}
+               alt={barn.node.name}
+               key={barn.node.id}/>
+        )}
         <Link to="/">Go back to the homepage</Link>
       </Layout>
     )
@@ -23,14 +28,24 @@ class SecondPage extends React.Component {
 }
 
 
-export default SecondPage
+export default Gallery
 
 export const query = graphql`
   query {
     allPostsJson {
       edges {
         node {
-          text
+          id
+          name
+          image {
+            src {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
         }
       }
     }

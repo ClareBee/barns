@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Header from '../components/header'
 
 const About = ({ data }) => {
+  console.log('data', data)
   return (
   <div style={{ color: `teal` }}>
     <Header headerText="About" />
