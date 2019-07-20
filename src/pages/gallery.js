@@ -19,7 +19,9 @@ class Gallery extends React.Component {
         {barns.map(barn =>
           <Img fluid={barn.node.image.src.childImageSharp.fluid}
                alt={barn.node.name}
-               key={barn.node.id}/>
+               key={barn.node.id}
+               className="gallery-image"
+               />
         )}
         <Link to="/">Go back to the homepage</Link>
       </Layout>

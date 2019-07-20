@@ -12,4 +12,9 @@ const typography = new Typography({
   ],
   bodyFontFamily: ["Georgia", "serif"],
 })
+
+// Hot reload typography in development.
+if (process.env.NODE_ENV !== `production`) {
+  typography.injectStyles()
+}
 export default typography
