@@ -10,8 +10,13 @@ export default class MyMap extends Component {
   }
 
   render() {
-    const position = [this.state.lat, this.state.lng]
-
+    var position
+    if (this.props) {
+      position = [this.props.lat, this.props.long]
+    } else {
+      position = [this.state.lat, this.state.lng]
+    }
+    console.log(this.props)
     return (
       <div ref={this.mapWrapperRef} className="map-wrapper">
         {(typeof window !== 'undefined') ? (

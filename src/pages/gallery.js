@@ -10,8 +10,6 @@ class Gallery extends React.Component {
   }
   render(){
     const barns = this.props.data.allPostsJson.edges
-    const paths = this.props.data.allImageSharp.edges
-    console.log(paths)
     return (
       <Layout>
         <SEO title="Page two" />
@@ -22,9 +20,8 @@ class Gallery extends React.Component {
             to={barn.node.slug}
             key={barn.node.id}
             >
-          <Img fluid={barn.node.image.src.childImageSharp.fluid}
+            <Img fluid={barn.node.image.src.childImageSharp.fluid}
                alt={barn.node.name}
-               key={barn.node.id}
                className="gallery-image"
                />
           </Link>
@@ -54,15 +51,6 @@ export const query = graphql`
                 }
               }
             }
-          }
-        }
-      }
-    }
-    allImageSharp {
-      edges {
-        node {
-          fields {
-            slug
           }
         }
       }
