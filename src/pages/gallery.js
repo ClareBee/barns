@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, gatsby } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -10,18 +10,23 @@ class Gallery extends React.Component {
   }
   render(){
     const barns = this.props.data.allPostsJson.edges
-    console.log(barns)
+    const paths = this.props.data.allImageSharp.edges
+    console.log(paths)
     return (
       <Layout>
         <SEO title="Page two" />
         <h1>Hi from the second page</h1>
         <p>Welcome to page 2</p>
         {barns.map(barn =>
+          <Link
+            to={barn.node.slug}
+            >
           <Img fluid={barn.node.image.src.childImageSharp.fluid}
                alt={barn.node.name}
                key={barn.node.id}
                className="gallery-image"
                />
+          </Link>
         )}
         <Link to="/">Go back to the homepage</Link>
       </Layout>
@@ -39,6 +44,7 @@ export const query = graphql`
         node {
           id
           name
+          slug
           image {
             src {
               childImageSharp {
@@ -47,6 +53,15 @@ export const query = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    allImageSharp {
+      edges {
+        node {
+          fields {
+            slug
           }
         }
       }

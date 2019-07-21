@@ -3,6 +3,7 @@
     "id": "1685001452849004065",
     "type": "GraphImage",
     "name": "Newby Barn",
+    "slug": "/newbybrn/",
     "image": {
       "src": "../images/newbybrn.jpg"
     },
@@ -13,6 +14,7 @@
     "id": "1677771511187112566",
     "type": "GraphImage",
     "name": "Stainforth Barns",
+    "slug": "/stainforth/",
     "image": {
       "src": "../images/stainforth.jpg"
     },
@@ -23,6 +25,7 @@
     "id": "1677771511187112567",
     "type": "GraphImage",
     "name": "Husband's Barn",
+    "slug": "/husbands/",
     "image": {
       "src": "../images/husbands.jpg"
     },
@@ -33,6 +36,7 @@
     "id": "1677771511187112568",
     "type": "GraphImage",
     "name": "Little Sunny Bank Barn",
+    "slug": "/barnpyg2",
     "image": {
       "src": "../images/barnpyg2.jpg"
     },
@@ -43,6 +47,7 @@
     "id": "1677771511187112569",
     "type": "GraphImage",
     "name": "Wharfe Barn",
+    "slug": "/wharfe/",
     "image": {
       "src": "../images/wharfe.jpg"
     },
