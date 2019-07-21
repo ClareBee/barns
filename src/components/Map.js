@@ -11,7 +11,7 @@ export default class MyMap extends Component {
 
   render() {
     var position
-    if (this.props) {
+    if (this.props.long) {
       position = [this.props.lat, this.props.long]
     } else {
       position = [this.state.lat, this.state.lng]
