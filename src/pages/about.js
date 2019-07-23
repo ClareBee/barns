@@ -7,7 +7,6 @@ const About = ({ data }) => {
   console.log('data', data)
   return (
   <div style={{ color: `teal` }}>
-    <Header headerText="About" />
     <Img
       fluid={data.image.childImageSharp.fluid}
       alt="Gatsby Docs are awesome" />

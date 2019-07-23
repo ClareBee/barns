@@ -3,12 +3,11 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import Map from '../components/Map'
 
-import Layout from "../components/layout"
 export default ({ data }) => {
   console.log('data', data)
   const barn = data.postsJson
   return (
-    <Layout>
+    <div>
       <h1>{barn.name}</h1>
       <Img
         fluid={barn.image.src.childImageSharp.fluid}
@@ -16,7 +15,7 @@ export default ({ data }) => {
         className="gallery-image"
       />
       <Map lat={barn.lat} long={barn.long} />
-    </Layout>
+    </div>
   )
 }
 export const query = graphql`

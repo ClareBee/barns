@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 class Gallery extends React.Component {
@@ -11,7 +10,7 @@ class Gallery extends React.Component {
   render(){
     const barns = this.props.data.allPostsJson.edges
     return (
-      <Layout>
+      <div>
         <SEO title="Page two" />
         <h1>Hi from the second page</h1>
         <p>Welcome to page 2</p>
@@ -27,7 +26,7 @@ class Gallery extends React.Component {
           </Link>
         )}
         <Link to="/">Go back to the homepage</Link>
-      </Layout>
+      </div>
     )
   }
 }

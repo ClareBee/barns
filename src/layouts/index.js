@@ -1,30 +1,21 @@
-/**
- * Layout component that queries for data
- * with Gatsby's StaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
+import Header from "../components/header"
 import "./layout.css"
+import Transition from '../components/transition'
 
-const Layout = ({ children }) => (
+const Layout = ({ children, location }) => (
   <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
+    query={graphql`query SiteTitleQuery {
         site {
           siteMetadata {
             title
           }
         }
-      }
-    `}
+      }`}
     render={data => (
-      <>
+      <div>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
@@ -34,20 +25,15 @@ const Layout = ({ children }) => (
             paddingTop: 0,
           }}
         >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+        <Transition location={location}>
+          {children}
+        </Transition>
         </div>
-      </>
+      </div>
     )}
   />
 )
-
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
 export default Layout
