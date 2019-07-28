@@ -8,15 +8,11 @@ import SideNav from "../components/sidenav"
 import "./layout.css"
 import Transition from '../components/transition'
 
-const PageBody = styled.div`
-  padding: 0 1.45rem;
-  padding-top: 0;
-`
-const Footer = styled.footer`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
+const PageBody = styled.main`
+  padding: 1.45rem;
+  margin-left: 375px;
+  min-height: 100vh;
+  padding-left: 150px;
 `
 const Layout = ({ children, location }) => (
   <StaticQuery
@@ -28,19 +24,14 @@ const Layout = ({ children, location }) => (
         }
       }`}
     render={data => (
-      <div>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      <React.Fragment>
+        <SideNav siteTitle={data.site.siteMetadata.title} />
         <PageBody>
           <Transition location={location}>
             {children}
           </Transition>
         </PageBody>
-        <Footer>
-          &copy; 2019 by ClareBee.{' '}
-          <a href="">GitHub</a>. Made by{' '}
-          <a href="">Blah</a>.
-        </Footer>
-      </div>
+      </React.Fragment>
     )}
   />
 )

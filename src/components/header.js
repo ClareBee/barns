@@ -5,10 +5,13 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const PageHeader = styled.header`
+  position: fixed;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 1rem;
   background-color: #ECEBF6;
-  padding: 1.45rem;
+  padding: 1.5rem;
+  z-index: 10;
 `
 const headerLink = css`
   color: grey;
@@ -17,19 +20,10 @@ const headerLink = css`
     color: pink;
   }
 `
-const menuLink = css`
-  display: inline-block;
-  margin-right: 1rem;
-`
-const ListLink = props => (
-  <li css={menuLink}>
-    <Link to={props.to}>{props.children}</Link>
-  </li>
-)
 
 const Header = ({ siteTitle }) => (
   <PageHeader>
-    <h1 style={{ margin: 0 }}>
+    <h1>
       <Link
         to="/"
         css={headerLink}
@@ -37,12 +31,6 @@ const Header = ({ siteTitle }) => (
         {siteTitle}
       </Link>
     </h1>
-    <ul style={{ listStyle: `none`, float: `right` }}>
-        <ListLink to="/">Home</ListLink>
-        <ListLink to="/gallery">Gallery</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-    </ul>
   </PageHeader>
 )
 

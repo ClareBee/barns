@@ -6,11 +6,11 @@ import Header from '../components/header'
 const About = ({ data }) => {
   console.log('data', data)
   return (
-  <div>
+  <React.Fragment>
     <Img
       fluid={data.image.childImageSharp.fluid}
       alt="Dales Barn" />
-  </div>
+  </React.Fragment>
   )
 }
 export default About

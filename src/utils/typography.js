@@ -10,7 +10,7 @@ const typography = new Typography({
     "Arial",
     "sans-serif",
   ],
-  bodyFontFamily: ["Georgia", "serif"],
+  bodyFontFamily: ["Quattrocento Sans", "sans-serif"],
 })
 
 // Hot reload typography in development.
