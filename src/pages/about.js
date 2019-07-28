@@ -6,10 +6,10 @@ import Header from '../components/header'
 const About = ({ data }) => {
   console.log('data', data)
   return (
-  <div style={{ color: `teal` }}>
+  <div>
     <Img
       fluid={data.image.childImageSharp.fluid}
-      alt="Gatsby Docs are awesome" />
+      alt="Dales Barn" />
   </div>
   )
 }

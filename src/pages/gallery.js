@@ -2,6 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
 class Gallery extends React.Component {
   constructor(){
@@ -11,9 +13,11 @@ class Gallery extends React.Component {
     const barns = this.props.data.allPostsJson.edges
     return (
       <div>
-        <SEO title="Page two" />
-        <h1>Hi from the second page</h1>
-        <p>Welcome to page 2</p>
+        <SEO title="Gallery" />
+        <h1>Gallery</h1>
+        <div css={css`
+          display: grid;
+        `}>
         {barns.map(barn =>
           <Link
             to={barn.node.slug}
@@ -21,10 +25,15 @@ class Gallery extends React.Component {
             >
             <Img fluid={barn.node.image.src.childImageSharp.fluid}
                alt={barn.node.name}
-               className="gallery-image"
+               css={css`
+                 max-width: 750px;
+                 margin: 1.45rem;
+                 border-radius: 5px;
+               `}
                />
           </Link>
         )}
+        </div>
         <Link to="/">Go back to the homepage</Link>
       </div>
     )
