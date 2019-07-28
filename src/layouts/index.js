@@ -12,6 +12,12 @@ const PageBody = styled.div`
   padding: 0 1.45rem;
   padding-top: 0;
 `
+const Footer = styled.footer`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+`
 const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`query SiteTitleQuery {
@@ -29,6 +35,11 @@ const Layout = ({ children, location }) => (
             {children}
           </Transition>
         </PageBody>
+        <Footer>
+          &copy; 2019 by ClareBee.{' '}
+          <a href="">GitHub</a>. Made by{' '}
+          <a href="">Blah</a>.
+        </Footer>
       </div>
     )}
   />

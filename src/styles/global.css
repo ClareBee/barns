@@ -1,1 +1,8 @@
+div#___gatsby {
+  position: relative;
+  min-height: 100vh;
+}
 
+div#___gatsby > div:first-of-type {
+  padding-bottom: 2.5rem;
+}

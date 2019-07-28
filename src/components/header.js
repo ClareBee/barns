@@ -13,6 +13,9 @@ const PageHeader = styled.header`
 const headerLink = css`
   color: grey;
   text-decoration: none;
+  &:hover {
+    color: pink;
+  }
 `
 const menuLink = css`
   display: inline-block;
