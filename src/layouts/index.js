@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
-import { css } from "@emotion/core"
+import { Global, css } from "@emotion/core"
 import Header from "../components/header"
 import SideNav from "../components/sidenav"
 import "./layout.css"
@@ -25,6 +25,11 @@ const Layout = ({ children, location }) => (
       }`}
     render={data => (
       <React.Fragment>
+      <Global styles={css`
+        p {
+          color: red;
+        }
+      `} />
         <SideNav siteTitle={data.site.siteMetadata.title} />
         <PageBody>
           <Transition location={location}>
