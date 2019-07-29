@@ -3,6 +3,6 @@ div#___gatsby {
   min-height: 100vh;
 }
 
-div#___gatsby > div:first-of-type {
+/* div#___gatsby > div:first-of-type {
   padding-bottom: 2.5rem;
-}
+} */

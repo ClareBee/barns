@@ -3,13 +3,6 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
-const Footer = styled.footer`
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2.5rem;
-  z-index: 10;
-`
 const menuLink = css`
   margin-right: 1rem;
   font-weight: bold;
@@ -40,7 +33,7 @@ const SideNav = ({siteTitle}) => {
     <aside css={css`
       box-sizing: border-box;
       position: fixed;
-      height: 100vh;
+      height: 100%;
       width: 375px;
       display: flex;
       flex-direction: column;
@@ -50,7 +43,14 @@ const SideNav = ({siteTitle}) => {
       padding: 1.45rem;
       background: white;
       border-right: 2px solid grey;
-      z-index: 5;
+
+      @media (max-width: 1200px) {
+        width: 320px;
+      }
+      @media (max-width: 1000px) {
+        position: relative;
+        width: 100%;
+      }
     `}>
     <PageHeader >
       <h1>
@@ -68,11 +68,7 @@ const SideNav = ({siteTitle}) => {
           <ListLink to="/about/">About</ListLink>
           <ListLink to="/contact/">Contact</ListLink>
       </ul>
-    <Footer>
-      &copy; 2019 by ClareBee.{' '}
-      <a href="">GitHub</a>. Made by{' '}
-      <a href="">Blah</a>.
-    </Footer>
+
     </aside>
   )
 }
