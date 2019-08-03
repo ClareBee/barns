@@ -8,9 +8,13 @@ const menuLink = css`
   font-weight: bold;
   font-size: 1.5rem;
 `
+
 const ListLink = props => (
   <li css={menuLink}>
-    <Link to={props.to}>{props.children}</Link>
+    <Link
+      to={props.to}
+      activeStyle={{color: "yellow"}}
+    >{props.children}</Link>
   </li>
 )
 
@@ -34,7 +38,6 @@ const headerLink = css`
   }
 `
 
-
 const SideNav = ({ siteTitle }) => {
   return (
     <aside css={css`
@@ -43,8 +46,6 @@ const SideNav = ({ siteTitle }) => {
       height: 100%;
       width: 375px;
       display: flex;
-      /* flex-direction: column; */
-      /* flex-wrap: nowrap; */
       flex-flow: column nowrap;
       /* check this */
       -webkit-box-pack: justify;
@@ -61,6 +62,7 @@ const SideNav = ({ siteTitle }) => {
         width: 100%;
       }
     `}>
+
     <PageHeader >
       <h1>
         <Link
@@ -77,7 +79,6 @@ const SideNav = ({ siteTitle }) => {
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </List>
-
     </aside>
   )
 }

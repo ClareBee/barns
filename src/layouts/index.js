@@ -22,9 +22,9 @@ const Container = styled.div`
 `
 const PageBody = styled.main`
   padding: 1.45rem;
-@media (min-width: calc(1000px + 1px)) {
-   grid-column-start: 2;
- }
+  @media (min-width: calc(1000px + 1px)) {
+     grid-column-start: 2;
+   }
 `
 
 const Footer = styled.footer`
