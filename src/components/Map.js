@@ -1,12 +1,44 @@
 import React, { Component } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { StaticQuery, graphql } from "gatsby"
 
+import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
-export default class MyMap extends Component {
-  state = {
-    lat: 54.1275990177612,
-    lng: -2.43310303309547,
-    zoom: 13,
+class MyMap extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      lat: 54.1275990177612,
+      lng: -2.43310303309547,
+      zoom: 13,
+      name: '',
+      markers: []
+    }
+    this.formatMarkers = this.formatMarkers.bind(this)
+  }
+
+  componentDidMount(){
+    this.formatMarkers()
+    console.log('state', this.state)
+  }
+
+  formatMarkers() {
+    const markers = this.props.barns.edges.map(({node}) => {
+      return {
+        lat: node.lat,
+        long: node.long,
+        name: node.name,
+        id: node.id
+      }
+    })
+    return markers.map(marker => (
+      <Marker position={[marker.lat, marker.long]} key={marker.id}>
+        <Popup>
+        {marker.name}
+        </Popup>
+      </Marker>
+    ))
   }
 
   render() {
@@ -16,12 +48,19 @@ export default class MyMap extends Component {
     } else {
       position = [this.state.lat, this.state.lng]
     }
-    console.log(this.props)
+    const name = this.props.barnName
+    const map = css`
+      height: 540px;
+    `
+    console.log('props', this.props)
     return (
-      <div ref={this.mapWrapperRef} className="map-wrapper">
+      <div>
         {(typeof window !== 'undefined') ? (
-           <Map ref={this.mapRef} center={position} zoom={this.state.zoom}
-              style={{height: '540px'}}
+           <Map
+              ref={this.mapRef}
+              center={position}
+              zoom={this.state.zoom}
+              css={map}
             >
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -29,12 +68,35 @@ export default class MyMap extends Component {
               />
             <Marker position={position} >
               <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                {name}
               </Popup>
-              </Marker>
+            </Marker>
+            {this.formatMarkers()}
           </Map>
         ) : null}
       </div>
     );
   }
 }
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allBarnsJson {
+          edges {
+            node {
+              id
+              name
+              lat
+              long
+            }
+          }
+        }
+      }
+    `}
+    render={(data) => (
+      <MyMap barns={data.allBarnsJson} />
+    )}
+  />
+)
