@@ -5,13 +5,13 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
-class MyMap extends Component {
+export default class MyMap extends Component {
   constructor(props){
     super(props)
     this.state = {
       lat: 54.1275990177612,
       lng: -2.43310303309547,
-      zoom: 13,
+      zoom: 10,
       name: '',
       markers: []
     }
@@ -24,7 +24,8 @@ class MyMap extends Component {
   }
 
   formatMarkers() {
-    const markers = this.props.barns.edges.map(({node}) => {
+    console.log(this.props)
+    const markers = this.props.allBarns.edges.map(({node}) => {
       return {
         lat: node.lat,
         long: node.long,
@@ -42,11 +43,13 @@ class MyMap extends Component {
   }
 
   render() {
-    var position
+    var position, zoom
     if (this.props.long) {
       position = [this.props.lat, this.props.long]
+      zoom = this.props.zoom
     } else {
       position = [this.state.lat, this.state.lng]
+      zoom = this.state.zoom
     }
     const name = this.props.barnName
     const map = css`
@@ -59,7 +62,7 @@ class MyMap extends Component {
            <Map
               ref={this.mapRef}
               center={position}
-              zoom={this.state.zoom}
+              zoom={zoom}
               css={map}
             >
             <TileLayer
@@ -71,32 +74,10 @@ class MyMap extends Component {
                 {name}
               </Popup>
             </Marker>
-            {this.formatMarkers()}
+            // {this.formatMarkers()}
           </Map>
         ) : null}
       </div>
     );
   }
 }
-
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        allBarnsJson {
-          edges {
-            node {
-              id
-              name
-              lat
-              long
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <MyMap barns={data.allBarnsJson} />
-    )}
-  />
-)

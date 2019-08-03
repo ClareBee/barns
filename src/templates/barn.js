@@ -22,7 +22,7 @@ export default ({ data }) => {
           border-radius: 5px;
         `}
       />
-      <Map lat={barn.lat} long={barn.long} barnName={barn.name}/>
+      <Map lat={barn.lat} long={barn.long} barnName={barn.name} allBarns={data.allBarns} zoom={13}/>
     </div>
   )
 }
@@ -42,6 +42,17 @@ export const query = graphql`
           }
         }
       }
+    }
+    allBarns: allBarnsJson {
+      edges {
+        node {
+          id
+          name
+          lat
+          long
+        }
+      }
+
     }
   }
 `
