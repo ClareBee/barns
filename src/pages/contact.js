@@ -5,8 +5,9 @@ import ContactForm from '../components/ContactForm'
 import MyMap from '../components/Map'
 
 export default () => (
-  <div style={{ color: `teal` }}>
+  <div>
     <p>Send us a message!</p>
+    <ContactForm />
     <MyMap></MyMap>
   </div>
 )

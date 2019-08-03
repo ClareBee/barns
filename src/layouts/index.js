@@ -59,7 +59,7 @@ const Layout = ({ children, location }) => (
 
       <Global styles={css`
         p {
-          color: red;
+          color: black;
         }
       `} />
       <Container>

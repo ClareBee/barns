@@ -7,13 +7,21 @@ const menuLink = css`
   margin-right: 1rem;
   font-weight: bold;
   font-size: 1.5rem;
+  a {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+    background: transparent;
+    color: grey;
+  }
 `
 
 const ListLink = props => (
   <li css={menuLink}>
     <Link
       to={props.to}
-      activeStyle={{color: "yellow"}}
+      activeStyle={{color: 'grey'}}
     >{props.children}</Link>
   </li>
 )
