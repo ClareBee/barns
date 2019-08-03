@@ -62,18 +62,7 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 ## Styling
 CSS-modules
-
-Styled-Components
-```
-npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
-```
-
-```javascript
-// gatsby-config.js
-module.exports = {
-  plugins: [`gatsby-plugin-styled-components`],
-}
-```
+Emotion
 
 ## Plugins
 e.g. Typography
@@ -128,34 +117,6 @@ plugins: [
     }
   ]
 ```
-
-## Documentation w Docz (mdx)
-`npm install --save gatsby-theme-docz docz docz-theme-default
-`
-
-```javascript
-gatsby-config.js
-module.exports = {
-  __experimentalThemes: [`gatsby-theme-docz`],
-  plugins: [`// your plugins go here`],
-}
-```
-
-```md
-docs/index.mdx
----
-name: Getting Started
-route: /
----
-
-# Getting Started
-
-## Hello world
-
-Type here the most beautyiful getting started that you ever saw!
-```
-
-Use a `doczrc.js` file for config
 
 ---
 ## Transformer plugins

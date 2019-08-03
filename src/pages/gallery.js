@@ -10,7 +10,7 @@ class Gallery extends React.Component {
     super()
   }
   render(){
-    const barns = this.props.data.allPostsJson.edges
+    const barns = this.props.data.allBarnsJson.edges
     return (
       <div>
         <SEO title="Gallery" />
@@ -45,7 +45,7 @@ export default Gallery
 
 export const query = graphql`
   query {
-    allPostsJson {
+    allBarnsJson {
       edges {
         node {
           id

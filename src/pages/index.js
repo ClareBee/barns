@@ -11,13 +11,12 @@ const IndexPage = ({ data }) => (
     `}>
     <SEO title="Home" keywords={[`barns`, `Yorkshire`, `Dales`]} />
     <h1>Welcome</h1>
-    <p>Now go build something great.</p>
-      <Img
-        fluid={data.image.childImageSharp.fluid}
-        alt="Dales Barn"
-        css={css`
-          width: 400px;
-        `} />
+    <Img
+      fluid={data.image.childImageSharp.fluid}
+      alt="Dales Barn"
+      css={css`
+        width: 400px;
+      `} />
   </div>
 )
 

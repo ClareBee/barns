@@ -1,4 +1,7 @@
 import Typography from "typography"
+
+// see if you can supply export const { scale, rhythm, options } = typography
+
 const typography = new Typography({
   baseFontSize: "18px",
   baseLineHeight: 1.666,

@@ -8,7 +8,7 @@ import Map from '../components/Map'
 
 export default ({ data }) => {
   console.log('data', data)
-  const barn = data.postsJson
+  const barn = data.barnsJson
   return (
     <div>
       <h1>{barn.name}</h1>
@@ -28,7 +28,7 @@ export default ({ data }) => {
 }
 export const query = graphql`
   query($slug: String!) {
-    postsJson(slug: { eq: $slug }) {
+    barnsJson(slug: { eq: $slug }) {
       id
       name
       lat

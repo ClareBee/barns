@@ -51,7 +51,7 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-manifest`, //update this 
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,

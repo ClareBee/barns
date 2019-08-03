@@ -1,12 +1,10 @@
 /**
- * Implement Gatsby's Node APIs in this file.
- *
  * See: https://www.gatsbyjs.org/docs/node-apis/
+ called whenever new node is created/updated
  */
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const path = require(`path`)
 
-// You can delete this file if you're not using it
 exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
   switch (stage) {
     case 'build-html':
@@ -20,14 +18,16 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
           ]
         }
       });
-      break;
+    break;
   }
 };
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
+  // createNodeField allows additional fields on nodes created by other apis
   const { createNodeField } = actions
   console.log(node.internal.type)
   if(node.internal.type === `ImageSharp`) {
+    // getNode traverses 'node graph' to get to parent File node
     const slug = createFilePath({ node, getNode, basePath: `images` })
     createNodeField({
       node,

@@ -20,6 +20,12 @@ const PageHeader = styled.header`
   background-color: #ECEBF6;
   padding: 1.5rem;
 `
+
+const List = styled.ul`
+  list-style: none;
+  float: right;
+`
+
 const headerLink = css`
   color: grey;
   text-decoration: none;
@@ -28,7 +34,8 @@ const headerLink = css`
   }
 `
 
-const SideNav = ({siteTitle}) => {
+
+const SideNav = ({ siteTitle }) => {
   return (
     <aside css={css`
       box-sizing: border-box;
@@ -36,8 +43,10 @@ const SideNav = ({siteTitle}) => {
       height: 100%;
       width: 375px;
       display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
+      /* flex-direction: column; */
+      /* flex-wrap: nowrap; */
+      flex-flow: column nowrap;
+      /* check this */
       -webkit-box-pack: justify;
       align-items: flex-end;
       padding: 1.45rem;
@@ -62,12 +71,12 @@ const SideNav = ({siteTitle}) => {
         </Link>
       </h1>
     </PageHeader>
-      <ul style={{ listStyle: `none`, float: `right` }}>
-          <ListLink to="/">Home</ListLink>
-          <ListLink to="/gallery">Gallery</ListLink>
-          <ListLink to="/about/">About</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
-      </ul>
+      <List>
+        <ListLink to="/">Home</ListLink>
+        <ListLink to="/gallery">Gallery</ListLink>
+        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/contact/">Contact</ListLink>
+      </List>
 
     </aside>
   )
