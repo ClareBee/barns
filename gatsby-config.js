@@ -1,9 +1,26 @@
 
 module.exports = {
+  pathPrefix: '/', // prefix for all links
   siteMetadata: {
     title: `Disappearing Barns`,
-    description: `Adapted from starter`,
-    author: `@gatsbyjs`,
+    titleAlt: `Dales Barns`, // title for JSONLD
+    description: `Barns in the Yorkshire Dales`,
+    headline: `Disappearing barns in the Yorkshire Dales`, // Headline for schema.org JSONLD
+    author: `@clarie_bee`,
+    url: ``, // site domain, no trailing slash
+    image: ``,
+    banner: ``, // used for SEO
+    ogLanguage: 'en_UK',
+    siteLanguage: `en`,
+    contentLocation: 'Yorkshire Dales National Park',
+    copyrightHolder: 'Margaret Blackburne',
+    copyrightYear: '2019',
+    isFamilyFriendly: true,
+    keywords: ['Yorkshire', 'barns', 'National Park', 'art', 'watercolour', 'artist'],
+    thumbnailUrl: ``,
+    instagram: ``,
+    googleAnalyticsID: ``,
+    twitterUsername: ``
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -51,13 +68,14 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-manifest`, //update this 
+      resolve: `gatsby-plugin-manifest`, //update this
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Disappearing Barns`,
+        short_name: `Dales barns`,
+        description: 'Disappearing Barns in the Yorkshire Dales',
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ECEBF6`,
+        theme_color: `#ECEBF6`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
