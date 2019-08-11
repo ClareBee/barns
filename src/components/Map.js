@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
+import { L, Map, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet'
 import { StaticQuery, graphql } from "gatsby"
 
 import styled from "@emotion/styled"
@@ -13,18 +13,30 @@ export default class MyMap extends Component {
       lng: -2.43310303309547,
       zoom: 10,
       name: '',
-      markers: []
+      markers: [],
+      singleBarn: false
     }
     this.formatMarkers = this.formatMarkers.bind(this)
+    this.popupRef = React.createRef();
+    this.mapRef = React.createRef();
+    this.setPageType = this.setPageType.bind(this)
+
   }
 
   componentDidMount(){
     this.formatMarkers()
-    console.log('state', this.state)
+    this.setPageType()
+  }
+
+  setPageType(){
+    if(this.props.long){
+      this.setState({
+        singleBarn: true
+      })
+    }
   }
 
   formatMarkers() {
-    console.log(this.props)
     const markers = this.props.allBarns.edges.map(({node}) => {
       return {
         lat: node.lat,
@@ -43,12 +55,14 @@ export default class MyMap extends Component {
   }
 
   render() {
-    var position, zoom
+    var position, zoom, popupDisplay
     if (this.props.long) {
       position = [this.props.lat, this.props.long]
+      popupDisplay = true
       zoom = this.props.zoom
     } else {
       position = [this.state.lat, this.state.lng]
+      popupDisplay = false
       zoom = this.state.zoom
     }
     const name = this.props.barnName
@@ -70,11 +84,11 @@ export default class MyMap extends Component {
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
             <Marker position={position} >
-              <Popup>
+              <Tooltip permanent={this.state.singleBarn}>
                 {name}
-              </Popup>
+              </Tooltip>
             </Marker>
-            // {this.formatMarkers()}
+            {this.formatMarkers()}
           </Map>
         ) : null}
       </div>
