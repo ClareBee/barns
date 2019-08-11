@@ -27,15 +27,19 @@ const ListLink = props => (
 )
 
 const PageHeader = styled.header`
-  margin: 0 auto;
   margin-bottom: 1rem;
   background-color: #ECEBF6;
-  padding: 1.5rem;
+  padding: 1rem;
+  @media (max-width: 1000px) {
+    width: 100%;
+    margin: 0 auto;
+  }
 `
 
 const List = styled.ul`
   list-style: none;
   float: right;
+  text-align: right;
 `
 
 const headerLink = css`
@@ -55,8 +59,6 @@ const SideNav = ({ siteTitle }) => {
       width: 375px;
       display: flex;
       flex-flow: column nowrap;
-      /* check this */
-      -webkit-box-pack: justify;
       align-items: flex-end;
       padding: 1.45rem;
       background: white;

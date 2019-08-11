@@ -1,10 +1,9 @@
 import React from "react"
-import Layout from "../layouts"
 
 const ThankYouPage = () => (
   <div>
     <h1>Contact</h1>
-    <p>Thank you for your submission!</p>
+    <p>Thanks for contacting us!</p>
   </div>
 )
 

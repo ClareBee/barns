@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/seo"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 class Gallery extends React.Component {
@@ -17,6 +16,14 @@ class Gallery extends React.Component {
         <h1>Gallery</h1>
         <div css={css`
           display: grid;
+          grid-template-columns: 600px 600px;
+          grid-gap: 50px;
+          @media (max-width: 1500px) {
+            grid-template-columns: 600px;
+          }
+          @media (max-width: 1000px){
+            grid-template-columns: 1fr;
+          }
         `}>
         {barns.map(barn =>
           <Link
@@ -24,11 +31,14 @@ class Gallery extends React.Component {
             key={barn.node.id}
             >
             <Img fluid={barn.node.image.src.childImageSharp.fluid}
-               alt={barn.node.name}
-               css={css`
-                 max-width: 750px;
-                 margin: 1.45rem;
-                 border-radius: 5px;
+              alt={barn.node.name}
+              css={css`
+                max-width: 750px;
+                /* margin: 1.45rem; */
+                border-radius: 5px;
+                /* -webkit-box-shadow: 4px 6px 8px 1px rgba(219,216,219,1); */
+                /* -moz-box-shadow: 4px 6px 8px 1px rgba(219,216,219,1); */
+                box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
                `}
                />
           </Link>

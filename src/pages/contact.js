@@ -1,11 +1,13 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Header from '../components/header'
+import { graphql } from 'gatsby'
+import SEO from "../components/seo"
 import ContactForm from '../components/ContactForm'
 import MyMap from '../components/Map'
 
 export default ({data}) => (
   <div>
+    <SEO title="Contact" />
+    <h1>Contact</h1>
     <p>Send us a message!</p>
     <ContactForm />
     <MyMap allBarns={data.allBarnsJson}></MyMap>

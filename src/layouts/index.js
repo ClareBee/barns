@@ -11,6 +11,7 @@ import "./layout.css"
 import Transition from '../components/transition'
 
 const Container = styled.div`
+  height: 100vh;
   display: grid;
   grid-template-columns: 375px 1fr;
   @media (max-width: 1400px}) {

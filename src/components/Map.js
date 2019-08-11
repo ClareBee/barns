@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
-import { L, Map, TileLayer, Marker, Popup, Tooltip } from 'react-leaflet'
-import { StaticQuery, graphql } from "gatsby"
-
-import styled from "@emotion/styled"
+import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import { css } from "@emotion/core"
 
 export default class MyMap extends Component {
@@ -20,7 +17,6 @@ export default class MyMap extends Component {
     this.popupRef = React.createRef();
     this.mapRef = React.createRef();
     this.setPageType = this.setPageType.bind(this)
-
   }
 
   componentDidMount(){
@@ -31,8 +27,10 @@ export default class MyMap extends Component {
   componentDidUpdate(){
     this.mapRef.current.leafletElement.setMinZoom(9)
     this.mapRef.current.leafletElement.setMaxZoom(19)
+    this.mapRef.current.leafletElement.scrollWheelZoom.disable()
     this.popupRef.current.leafletElement.openPopup()
   }
+
   setPageType(){
     if(this.props.long){
       this.setState({
@@ -53,21 +51,19 @@ export default class MyMap extends Component {
     return markers.map(marker => (
       <Marker position={[marker.lat, marker.long]} key={marker.id}>
         <Popup>
-        {marker.name}
+          {marker.name}
         </Popup>
       </Marker>
     ))
   }
 
   render() {
-    var position, zoom, popupDisplay
+    var position, zoom
     if (this.props.long) {
       position = [this.props.lat, this.props.long]
-      popupDisplay = true
       zoom = this.props.zoom
     } else {
       position = [this.state.lat, this.state.lng]
-      popupDisplay = false
       zoom = this.state.zoom
     }
     const name = this.props.barnName
