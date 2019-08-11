@@ -65,7 +65,7 @@ const Layout = ({ children, location }) => (
       <Container>
         <SideNav siteTitle={data.site.siteMetadata.title} />
         <PageBody>
-          <Transition location={location}>
+          <Transition location={location || ''}>
             {children}
           </Transition>
         </PageBody>

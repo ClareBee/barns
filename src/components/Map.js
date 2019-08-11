@@ -28,6 +28,11 @@ export default class MyMap extends Component {
     this.setPageType()
   }
 
+  componentDidUpdate(){
+    this.mapRef.current.leafletElement.setMinZoom(9)
+    this.mapRef.current.leafletElement.setMaxZoom(19)
+    this.popupRef.current.leafletElement.openPopup()
+  }
   setPageType(){
     if(this.props.long){
       this.setState({
@@ -83,10 +88,10 @@ export default class MyMap extends Component {
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-            <Marker position={position} >
-              <Tooltip permanent={this.state.singleBarn}>
-                {name}
-              </Tooltip>
+            <Marker position={position} ref={this.popupRef}>
+              <Popup>
+              {name}
+              </Popup>
             </Marker>
             {this.formatMarkers()}
           </Map>
