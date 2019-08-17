@@ -14,6 +14,8 @@ const IndexPage = ({ data }) => (
       alt="Dales Barn"
       css={css`
         max-width: 400px;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+        border-radius: 5px;
       `} />
   </div>
 )

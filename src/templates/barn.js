@@ -19,6 +19,9 @@ export default ({ data }) => {
           max-width: 960px;
           margin: 1.45rem;
           border-radius: 5px;
+          /* -webkit-box-shadow: 4px 6px 8px 1px rgba(219,216,219,1); */
+          /* -moz-box-shadow: 4px 6px 8px 1px rgba(219,216,219,1); */
+          box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
         `}
       />
       <Map lat={barn.lat} long={barn.long} barnName={barn.name} allBarns={data.allBarns} zoom={14}/>

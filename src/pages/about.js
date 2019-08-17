@@ -14,9 +14,11 @@ const About = ({ data }) => {
     <h1>About</h1>
     <Img
       fluid={data.image.childImageSharp.fluid}
-      alt="Dales Barn"
+      alt="Sketchbook"
       css={css`
         max-width: 400px;
+        box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+        border-radius: 5px;
       `} />
   </React.Fragment>
   )
