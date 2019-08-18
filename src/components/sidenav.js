@@ -86,6 +86,7 @@ const SideNav = ({ siteTitle }) => {
       <List>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/gallery">Gallery</ListLink>
+        <ListLink to="/sketches">Sketches</ListLink>
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </List>
