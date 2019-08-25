@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 import Img from 'gatsby-image';
-import styled from "@emotion/styled"
+import { css } from "@emotion/core"
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 5px;
-`;
-
-const Rollerdeck = ({ barnImages }) => {
+const Rollerdeck = ({ barnImages, selectImage }) => {
   return (
-    <Container>
+    <React.Fragment>
       {barnImages.map(image => (
+        <div onClick={() => selectImage(image)}>
         <Img
+          css={css`display: flex; flex-direction: row;`}
           key={image.node.image.src.childImageSharp.fluid.src}
           fluid={image.node.image.src.childImageSharp.fluid}
         />
+        </div>
       ))}
-    </Container>
+    </React.Fragment>
   );
 }
 
