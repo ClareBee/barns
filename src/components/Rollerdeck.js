@@ -8,7 +8,6 @@ const Rollerdeck = ({ barnImages, selectImage }) => {
       {barnImages.map(image => (
         <div onClick={() => selectImage(image)}>
         <Img
-          css={css`display: flex; flex-direction: row;`}
           key={image.node.image.src.childImageSharp.fluid.src}
           fluid={image.node.image.src.childImageSharp.fluid}
         />

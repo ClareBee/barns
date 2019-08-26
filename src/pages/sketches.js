@@ -18,8 +18,11 @@ const Sketches = ({ data}) => {
   const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 5px;
-    ;`
+    grid-gap: 10px;
+    max-height: 150px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    `
 
   return (
     <div>
