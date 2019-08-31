@@ -1,25 +1,29 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import Rollerdeck from "../components/Rollerdeck"
 import Sketch from '../components/Sketch'
+import { DialogOverlay, DialogContent } from "@reach/dialog"
+import '@reach/dialog/styles.css'
+
+
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 
-const Sketches = ({ data}) => {
-  const [selectedSketch, setSelectedSketch] = useState(data.allBarnsJson.edges[0])
+const Sketches = ({ data, location }) => {
+  const [selectedSketch, setSelectedSketch] = useState(false)
+  const [showDialog, setShowDialog] = useState(false)
   const barns = data.allBarnsJson.edges
 
   const selectImage = image => {
     setSelectedSketch(image)
+    setShowDialog(true)
   }
 
   const Container = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
-    max-height: 150px;
     overflow: hidden;
     margin-bottom: 10px;
     `
@@ -31,8 +35,28 @@ const Sketches = ({ data}) => {
       <Container>
         <Rollerdeck barnImages={barns} selectImage={selectImage} css={css`grid-area: deck;`}/>
       </Container>
-      {selectedSketch &&
-        <Sketch sketch={selectedSketch} css={css`width: 80%;`}/>
+
+      {showDialog &&
+
+        <DialogOverlay
+          style={{
+            background: "hsla(0, 100%, 100%, 0.9)"
+          }}>
+          <DialogContent
+            style={{
+              padding: '25px',
+              border: '1px solid grey',
+              borderRadius: '5px',
+              boxShadow: '0px 3px 15px rgba(0,0,0,0.3)',
+            }}
+          >
+            <Sketch sketch={selectedSketch} />
+            <p>Some details about the sketch</p>
+            <button type="button" onClick={() => setShowDialog(false)}>
+              Close
+            </button>
+          </DialogContent>
+        </DialogOverlay>
       }
       <Link to="/">Go back to the homepage</Link>
     </div>
