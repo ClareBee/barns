@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 

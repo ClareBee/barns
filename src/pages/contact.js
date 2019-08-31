@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import ContactForm from '../components/ContactForm'
 import MyMap from '../components/Map'
 

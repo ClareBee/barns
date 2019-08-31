@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
-import SEO from "../components/seo"
+import SEO from "../components/Seo"
 import { css } from "@emotion/core"
 
 class Gallery extends React.Component {
@@ -16,7 +16,7 @@ class Gallery extends React.Component {
         <h1>Gallery</h1>
         <div css={css`
           display: grid;
-          grid-template-columns: 600px 600px;
+          grid-template-columns: repeat(2, 1fr);
           grid-gap: 50px;
           @media (max-width: 1500px) {
             grid-template-columns: 600px;

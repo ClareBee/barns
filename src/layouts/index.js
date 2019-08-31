@@ -5,10 +5,10 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import theme from "../utils/theme"
-import Header from "../components/header"
-import SideNav from "../components/sidenav"
+import Header from "../components/Header"
+import SideNav from "../components/Sidenav"
 import "./layout.css"
-import Transition from '../components/transition'
+import Transition from '../components/Transition'
 
 const Container = styled.div`
   height: 100vh;
