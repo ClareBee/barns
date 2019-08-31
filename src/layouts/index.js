@@ -5,16 +5,16 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import theme from "../utils/theme"
-import Header from "../components/Header"
+import Header from "../components/Heading"
 import SideNav from "../components/Sidenav"
 import "./layout.css"
-import Transition from '../components/Transition'
+import Transition from "../components/Transition"
 
 const Container = styled.div`
   height: 100vh;
   display: grid;
   grid-template-columns: 375px 1fr;
-  @media (max-width: 1400px}) {
+  @media  {
     grid-template-columns: 320px 1fr;
   }
   @media (max-width: 1000px) {
@@ -24,8 +24,8 @@ const Container = styled.div`
 const PageBody = styled.main`
   padding: 1.45rem;
   @media (min-width: calc(1000px + 1px)) {
-     grid-column-start: 2;
-   }
+    grid-column-start: 2;
+  }
 `
 
 const Footer = styled.footer`
@@ -48,33 +48,33 @@ const Footer = styled.footer`
 `
 const Layout = ({ children, location }) => (
   <StaticQuery
-    query={graphql`query SiteTitleQuery {
+    query={graphql`
+      query SiteTitleQuery {
         site {
           siteMetadata {
             title
           }
         }
-      }`}
+      }
+    `}
     render={data => (
       <React.Fragment>
-
-      <Global styles={css`
-        p {
-          color: black;
-        }
-      `} />
-      <Container>
-        <SideNav siteTitle={data.site.siteMetadata.title} />
-        <PageBody>
-          <Transition location={location || ''}>
-            {children}
-          </Transition>
-        </PageBody>
-        <Footer>
-          &copy; 2019 by ClareBee.{' '}
-          <a href="">GitHub</a>. Made by{' '}
-          <a href="">Blah</a>.
-        </Footer>
+        <Global
+          styles={css`
+            p {
+              color: black;
+            }
+          `}
+        />
+        <Container>
+          <SideNav siteTitle={data.site.siteMetadata.title} />
+          <PageBody>
+            <Transition location={location || ""}>{children}</Transition>
+          </PageBody>
+          <Footer>
+            &copy; 2019 by ClareBee. <a href="">GitHub</a>. Made by{" "}
+            <a href="">Blah</a>.
+          </Footer>
         </Container>
       </React.Fragment>
     )}

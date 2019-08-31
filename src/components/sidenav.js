@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
@@ -19,16 +19,15 @@ const menuLink = css`
 
 const ListLink = props => (
   <li css={menuLink}>
-    <Link
-      to={props.to}
-      activeStyle={{color: 'grey'}}
-    >{props.children}</Link>
+    <Link to={props.to} activeStyle={{ color: "grey" }}>
+      {props.children}
+    </Link>
   </li>
 )
 
 const PageHeader = styled.header`
   margin-bottom: 1rem;
-  background-color: #ECEBF6;
+  background-color: #ecebf6;
   padding: 1rem;
   @media (max-width: 1000px) {
     width: 100%;
@@ -52,37 +51,35 @@ const headerLink = css`
 
 const SideNav = ({ siteTitle }) => {
   return (
-    <aside css={css`
-      box-sizing: border-box;
-      position: fixed;
-      height: 100%;
-      width: 375px;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: flex-end;
-      padding: 1.45rem;
-      background: white;
-      border-right: 2px solid grey;
+    <aside
+      css={css`
+        box-sizing: border-box;
+        position: fixed;
+        height: 100%;
+        width: 375px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-end;
+        padding: 1.45rem;
+        background: white;
+        border-right: 2px solid grey;
 
-      @media (max-width: 1200px) {
-        width: 320px;
-      }
-      @media (max-width: 1000px) {
-        position: relative;
-        width: 100%;
-      }
-    `}>
-
-    <PageHeader >
-      <h1>
-        <Link
-          to="/"
-          css={headerLink}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </PageHeader>
+        @media (max-width: 1200px) {
+          width: 320px;
+        }
+        @media (max-width: 1000px) {
+          position: relative;
+          width: 100%;
+        }
+      `}
+    >
+      <PageHeader>
+        <h1>
+          <Link to="/" css={headerLink}>
+            {siteTitle}
+          </Link>
+        </h1>
+      </PageHeader>
       <List>
         <ListLink to="/">Home</ListLink>
         <ListLink to="/gallery">Gallery</ListLink>

@@ -9,7 +9,7 @@ const PageHeader = styled.header`
   width: 100%;
   margin: 0 auto;
   margin-bottom: 1rem;
-  background-color: #ECEBF6;
+  background-color: #ecebf6;
   padding: 1.5rem;
   z-index: 10;
 `
@@ -24,10 +24,7 @@ const headerLink = css`
 const Header = ({ siteTitle }) => (
   <PageHeader>
     <h1>
-      <Link
-        to="/"
-        css={headerLink}
-      >
+      <Link to="/" css={headerLink}>
         {siteTitle}
       </Link>
     </h1>

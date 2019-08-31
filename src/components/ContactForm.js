@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
@@ -32,7 +32,12 @@ const Button = styled.button`
 
 const ContactForm = () => {
   return (
-    <Form name="Contact Form" method="POST" data-netlify="true" action="/thank-you">
+    <Form
+      name="Contact Form"
+      method="POST"
+      data-netlify="true"
+      action="/thank-you"
+    >
       <input type="hidden" name="form-name" value="Contact Form" />
       <div>
         <Label>Your Email:</Label>

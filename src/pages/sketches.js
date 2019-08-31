@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
-import SEO from "../components/Seo"
+import SEO from "../components/SeoDetails"
 import Rollerdeck from "../components/Rollerdeck"
-import Sketch from '../components/Sketch'
+import Sketch from "../components/Sketch"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
-import '@reach/dialog/styles.css'
-
+import "@reach/dialog/styles.css"
 
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
@@ -26,28 +25,34 @@ const Sketches = ({ data, location }) => {
     grid-gap: 10px;
     overflow: hidden;
     margin-bottom: 10px;
-    `
+  `
 
   return (
     <div>
       <SEO title="Sketches" />
       <h1>Sketches</h1>
       <Container>
-        <Rollerdeck barnImages={barns} selectImage={selectImage} css={css`grid-area: deck;`}/>
+        <Rollerdeck
+          barnImages={barns}
+          selectImage={selectImage}
+          css={css`
+            grid-area: deck;
+          `}
+        />
       </Container>
 
-      {showDialog &&
-
+      {showDialog && (
         <DialogOverlay
           style={{
-            background: "hsla(0, 100%, 100%, 0.9)"
-          }}>
+            background: "hsla(0, 100%, 100%, 0.9)",
+          }}
+        >
           <DialogContent
             style={{
-              padding: '25px',
-              border: '1px solid grey',
-              borderRadius: '5px',
-              boxShadow: '0px 3px 15px rgba(0,0,0,0.3)',
+              padding: "25px",
+              border: "1px solid grey",
+              borderRadius: "5px",
+              boxShadow: "0px 3px 15px rgba(0,0,0,0.3)",
             }}
           >
             <Sketch sketch={selectedSketch} />
@@ -57,13 +62,11 @@ const Sketches = ({ data, location }) => {
             </button>
           </DialogContent>
         </DialogOverlay>
-      }
+      )}
       <Link to="/">Go back to the homepage</Link>
     </div>
   )
 }
-
-
 
 export default Sketches
 

@@ -1,10 +1,10 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import SEO from "../components/Seo"
-import ContactForm from '../components/ContactForm'
-import MyMap from '../components/Map'
+import React from "react"
+import { graphql } from "gatsby"
+import SEO from "../components/SeoDetails"
+import ContactForm from "../components/ContactForm"
+import MyMap from "../components/Map"
 
-export default ({data}) => (
+export default ({ data }) => (
   <div>
     <SEO title="Contact" />
     <h1>Contact</h1>
