@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/SeoDetails"
 import styled from "@emotion/styled"
@@ -9,7 +10,7 @@ const Text = styled.p`
   ::first-letter {
     font-size: 200%;
     font-weight: bold;
-    color: #8a2be2;
+    color: #A2708A;
   }
 `
 const TextBox = styled.div`
@@ -30,11 +31,7 @@ const IndexPage = ({ data }) => (
   >
     <SEO title="Home" keywords={[`barns`, `Yorkshire`, `Dales`]} />
     <h1>Welcome</h1>
-    <h3
-      css={css`
-        color: grey;
-      `}
-    >
+    <h3>
       Subtitle about the website goes here
     </h3>
     <Img

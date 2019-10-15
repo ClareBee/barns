@@ -13,16 +13,15 @@ import Transition from "../components/Transition"
 const Container = styled.div`
   height: 100vh;
   display: grid;
+  background-colour: #FDFDFF;
   grid-template-columns: 375px 1fr;
-  @media  {
-    grid-template-columns: 320px 1fr;
-  }
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 `
 const PageBody = styled.main`
-  padding: 1.45rem;
+  background-colour: #FDFDFF;
+  padding: 2.45rem;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
   }
@@ -35,7 +34,7 @@ const Footer = styled.footer`
   a {
     text-decoration: none;
     &:hover {
-      color: green;
+      color: ;
     }
   }
   @media (max-width: 1200px) {
@@ -61,8 +60,20 @@ const Layout = ({ children, location }) => (
       <React.Fragment>
         <Global
           styles={css`
-            p {
-              color: black;
+            h1, a {
+              color: #627264;
+            }
+            a {
+              transition: all .3s ease-in-out;
+            }
+            a:hover {
+              color: #A2708A;
+            }
+            h2, h3 {
+              color: #B3B2B6;
+            }
+            h4, h5, p, label {
+              color: #3A3C3F;
             }
           `}
         />

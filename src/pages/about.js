@@ -12,11 +12,10 @@ const Text = styled.p`
   ::first-letter {
     font-size: 200%;
     font-weight: bold;
-    color: #8A2BE2;
+    color: #A2708A;
 `
 
 const About = ({ data }) => {
-  console.log("data", data)
   return (
     <React.Fragment>
       <SEO title="About" />

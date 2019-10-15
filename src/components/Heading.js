@@ -17,7 +17,7 @@ const headerLink = css`
   color: grey;
   text-decoration: none;
   &:hover {
-    color: pink;
+    color: #533747;
   }
 `
 

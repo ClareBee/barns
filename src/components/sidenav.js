@@ -10,16 +10,19 @@ const menuLink = css`
   a {
     text-decoration: none;
   }
+  a:hover {
+    color: #89868D;
+  }
   a:active {
     text-decoration: none;
     background: transparent;
-    color: grey;
+    color: #A2708A;
   }
 `
 
 const ListLink = props => (
   <li css={menuLink}>
-    <Link to={props.to} activeStyle={{ color: "grey" }}>
+    <Link to={props.to} activeStyle={{ color: "#A2708A" }}>
       {props.children}
     </Link>
   </li>
@@ -27,7 +30,7 @@ const ListLink = props => (
 
 const PageHeader = styled.header`
   margin-bottom: 1rem;
-  background-color: #ecebf6;
+  border: 2px solid #BAC7BE;
   padding: 1rem;
   @media (max-width: 1000px) {
     width: 100%;
@@ -42,10 +45,19 @@ const List = styled.ul`
 `
 
 const headerLink = css`
-  color: grey;
+  color: #FDFDFF;
+  background-color: #565656;
+  font-size: 2.5rem;
+  font-family: 'Helvetica Neue';
+  color: transparent;
+  text-shadow: 0px 2px 3px rgba(255,255,255,0.4);
+  -webkit-background-clip: text;
+     -moz-background-clip: text;
+          background-clip: text;
   text-decoration: none;
+  transition: all .3s ease-in-out;
   &:hover {
-    color: pink;
+    color: #627264;
   }
 `
 
