@@ -63,7 +63,7 @@ const Sketches = ({ data, location }) => {
           </DialogContent>
         </DialogOverlay>
       )}
-      <Link to="/">Go back to the homepage</Link>
+      <Link to="/">Go back to the gallery</Link>
     </div>
   )
 }

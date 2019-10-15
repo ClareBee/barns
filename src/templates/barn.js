@@ -46,7 +46,7 @@ export default ({ data }) => {
     >
       <div css={header}>
         <h1>{barn.name}</h1>
-        <Link to="/gallery">Back to Gallery</Link>
+        <Link to="/">Back to Gallery</Link>
       </div>
       <Img
         fluid={barn.image.src.childImageSharp.fluid}
