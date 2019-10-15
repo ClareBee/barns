@@ -5,8 +5,6 @@ import SEO from "../components/SeoDetails"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
-import Header from "../components/Heading"
-
 const Text = styled.p`
   line-height: 1.5rem;
   ::first-letter {

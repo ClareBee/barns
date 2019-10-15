@@ -37,6 +37,25 @@ const PageHeader = styled.header`
     margin: 0 auto;
   }
 `
+const Aside = styled.aside`
+  box-sizing: border-box;
+  position: fixed;
+  height: 100%;
+  width: 375px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  padding: 1.45rem;
+  background: white;
+  border-right: 2px solid grey;
+  overflow: scroll;
+
+  @media (max-width: 1000px) {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+  }
+`
 
 const List = styled.ul`
   list-style: none;
@@ -63,28 +82,7 @@ const headerLink = css`
 
 const SideNav = ({ siteTitle }) => {
   return (
-    <aside
-      css={css`
-        box-sizing: border-box;
-        position: fixed;
-        height: 100%;
-        width: 375px;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: flex-end;
-        padding: 1.45rem;
-        background: white;
-        border-right: 2px solid grey;
-
-        @media (max-width: 1200px) {
-          width: 320px;
-        }
-        @media (max-width: 1000px) {
-          position: relative;
-          width: 100%;
-        }
-      `}
-    >
+    <Aside>
       <PageHeader>
         <h1>
           <Link to="/" css={headerLink}>
@@ -99,7 +97,7 @@ const SideNav = ({ siteTitle }) => {
         <ListLink to="/about/">About</ListLink>
         <ListLink to="/contact/">Contact</ListLink>
       </List>
-    </aside>
+    </Aside>
   )
 }
 

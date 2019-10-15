@@ -5,8 +5,8 @@ import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import theme from "../utils/theme"
-import Header from "../components/Heading"
 import SideNav from "../components/Sidenav"
+import SiteFooter from "../components/Footer"
 import "./layout.css"
 import Transition from "../components/Transition"
 
@@ -21,30 +21,13 @@ const Container = styled.div`
 `
 const PageBody = styled.main`
   background-colour: #FDFDFF;
-  padding: 2.45rem;
+  padding: 50px 75px;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
   }
 `
 
-const Footer = styled.footer`
-  position: fixed;
-  width: 375px;
-  bottom: 0;
-  a {
-    text-decoration: none;
-    &:hover {
-      color: ;
-    }
-  }
-  @media (max-width: 1200px) {
-    width: 320px;
-  }
-  @media (max-width: 1000px) {
-    position: relative;
-    width: 100%;
-  }
-`
+
 const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
@@ -82,10 +65,7 @@ const Layout = ({ children, location }) => (
           <PageBody>
             <Transition location={location || ""}>{children}</Transition>
           </PageBody>
-          <Footer>
-            &copy; 2019 by ClareBee. <a href="">GitHub</a>. Made by{" "}
-            <a href="">Blah</a>.
-          </Footer>
+          <SiteFooter />
         </Container>
       </React.Fragment>
     )}
