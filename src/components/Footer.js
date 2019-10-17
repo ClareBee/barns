@@ -22,8 +22,13 @@ const Footer = styled.footer`
 `
 const SiteFooter = () => (
   <Footer>
-    &copy; 2019 by ClareBee. <a href="">GitHub</a>. Made by{" "}
-    <a href="">Blah</a>.
+    <a
+      href="https://www.github.com/ClareBee"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      &copy; 2019 by ClareBee
+    </a>
   </Footer>
 )
 

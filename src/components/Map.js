@@ -70,7 +70,7 @@ export default class MyMap extends Component {
     `
     console.log("props", this.props)
     return (
-      <div>
+      <React.Fragment>
         {typeof window !== "undefined" ? (
           <Map ref={this.mapRef} center={position} zoom={zoom} css={map}>
             <TileLayer
@@ -83,7 +83,7 @@ export default class MyMap extends Component {
             {this.formatMarkers()}
           </Map>
         ) : null}
-      </div>
+      </React.Fragment>
     )
   }
 }

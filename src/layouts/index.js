@@ -21,7 +21,7 @@ const Container = styled.div`
 `
 const PageBody = styled.main`
   background-colour: #FDFDFF;
-  padding: 50px 75px;
+  padding: 25px 75px;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
   }

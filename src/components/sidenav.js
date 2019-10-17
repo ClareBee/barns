@@ -28,7 +28,7 @@ const ListLink = props => (
   </li>
 )
 
-const PageHeader = styled.header`
+const NavHeader = styled.header`
   margin-bottom: 1rem;
   border: 2px solid #BAC7BE;
   padding: 1rem;
@@ -83,13 +83,13 @@ const headerLink = css`
 const SideNav = ({ siteTitle }) => {
   return (
     <Aside>
-      <PageHeader>
+      <NavHeader>
         <h1>
           <Link to="/" css={headerLink}>
             {siteTitle}
           </Link>
         </h1>
-      </PageHeader>
+      </NavHeader>
       <List>
         <ListLink to="/">Gallery</ListLink>
         <ListLink to="/sketches">Sketches</ListLink>
