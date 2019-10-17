@@ -8,8 +8,9 @@ export default ({ data }) => (
   <div>
     <SEO title="Contact" />
     <h1>Contact</h1>
-    <h3>Send us a message!</h3>
+    <h3>Get in touch using the form</h3>
     <ContactForm />
+    <hr />
     <MyMap allBarns={data.allBarnsJson}></MyMap>
   </div>
 )

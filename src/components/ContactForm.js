@@ -9,25 +9,36 @@ const Form = styled.form`
     margin: 0 auto;
   }
 `
+const FormGroup = styled.div`
+  margin-top: 10px;
+`
+
 const Label = styled.label`
+  color: #627264;
   font-weight: bold;
   width: 100%;
 `
 const Input = styled.input`
+  border-color: #B3B2B6;
   border-radius: 5px;
-  margin: 5px;
+  border-width: 1px;
+  margin: 10px 5px;
   width: 100%;
 `
 const Textarea = styled.textarea`
-  width: 100%;
+  border-color: #B3B2B6;
   border-radius: 5px;
   margin: 5px;
+  width: 100%;
 `
 
 const Button = styled.button`
+  background-color: #627264;
   border-radius: 5px;
-  background-color: grey;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
+  margin: 15px 0 0 5px;
+  padding: 5px 25px;
 `
 
 const ContactForm = () => {
@@ -38,15 +49,19 @@ const ContactForm = () => {
       data-netlify="true"
       action="/thank-you"
     >
-      <input type="hidden" name="form-name" value="Contact Form" />
-      <div>
+      <Input type="hidden" name="form-name" value="Contact Form" />
+      <FormGroup>
         <Label>Your Email:</Label>
         <Input type="email" name="email" />
-      </div>
-      <div>
+      </FormGroup>
+      <FormGroup>
+        <Label>Subject:</Label>
+        <Input type="text" name="subject" />
+      </FormGroup>
+      <FormGroup>
         <Label>Message:</Label>
         <Textarea name="message" />
-      </div>
+      </FormGroup>
       <Button type="submit">Send</Button>
     </Form>
   )
