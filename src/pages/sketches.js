@@ -15,31 +15,28 @@ const Sketches = ({ data, location }) => {
   const barns = data.allBarnsJson.edges
 
   const selectImage = image => {
+    console.log('clicked', image)
     setSelectedSketch(image)
     setShowDialog(true)
   }
 
-  const Container = styled.div`
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-    overflow: hidden;
-    margin-bottom: 10px;
+  const Button = styled.button`
+    background-color: #627264;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    color: white;
+    margin: 15px 0 0 5px;
+    padding: 5px 25px;
   `
 
   return (
-    <div>
+    <React.Fragment>
       <SEO title="Sketches" />
       <h1>Sketches</h1>
-      <Container>
-        <Rollerdeck
-          barnImages={barns}
-          selectImage={selectImage}
-          css={css`
-            grid-area: deck;
-          `}
-        />
-      </Container>
+      <Rollerdeck
+        barnImages={barns}
+        selectImage={selectImage}
+      />
 
       {showDialog && (
         <DialogOverlay
@@ -57,14 +54,14 @@ const Sketches = ({ data, location }) => {
           >
             <Sketch sketch={selectedSketch} />
             <p>Some details about the sketch</p>
-            <button type="button" onClick={() => setShowDialog(false)}>
+            <Button type="button" onClick={() => setShowDialog(false)}>
               Close
-            </button>
+            </Button>
           </DialogContent>
         </DialogOverlay>
       )}
       <Link to="/">Go back to the gallery</Link>
-    </div>
+    </React.Fragment>
   )
 }
 
