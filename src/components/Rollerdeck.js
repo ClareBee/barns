@@ -28,6 +28,12 @@ const Rollerdeck = ({ barnImages, selectImage }) => {
               overflow: hidden;
               border-radius: 5px;
               box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+              cursor: pointer;
+              transition: all .1s ease-out;
+              :hover {
+                transform: scale(.99);
+                opacity: .8;
+              }
             `}
           />
         </div>

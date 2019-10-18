@@ -45,9 +45,9 @@ const Aside = styled.aside`
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-end;
-  padding: 1.45rem;
+  padding: 25px;
   background: white;
-  border-right: 2px solid grey;
+  border-right: 2px solid #D5D5D7;
   overflow: scroll;
 
   @media (max-width: 1000px) {

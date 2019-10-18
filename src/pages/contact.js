@@ -2,30 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import SEO from "../components/SeoDetails"
 import ContactForm from "../components/ContactForm"
-import MyMap from "../components/Map"
 
 export default ({ data }) => (
-  <div>
+  <React.Fragment>
     <SEO title="Contact" />
     <h1>Contact</h1>
-    <h3>Get in touch using the form</h3>
+    <h3>Feel free to get in touch</h3>
+    <br/>
     <ContactForm />
-    <hr />
-    <MyMap allBarns={data.allBarnsJson}></MyMap>
-  </div>
+  </React.Fragment>
 )
-
-export const query = graphql`
-  query {
-    allBarnsJson {
-      edges {
-        node {
-          id
-          name
-          lat
-          long
-        }
-      }
-    }
-  }
-`

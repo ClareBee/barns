@@ -67,6 +67,8 @@ export default class MyMap extends Component {
     const name = this.props.barnName
     const map = css`
       height: 540px;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
     `
     console.log("props", this.props)
     return (

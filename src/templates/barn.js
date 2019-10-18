@@ -46,7 +46,6 @@ export default ({ data }) => {
     >
       <div css={header}>
         <h1>{barn.name}</h1>
-        <Link to="/">Back to Gallery</Link>
       </div>
       <Img
         fluid={barn.image.src.childImageSharp.fluid}
@@ -55,7 +54,7 @@ export default ({ data }) => {
           grid-area: main;
           width: 100%;
           border-radius: 5px;
-          box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         `}
       />
       <div css={text}>

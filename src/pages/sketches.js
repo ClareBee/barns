@@ -21,12 +21,13 @@ const Sketches = ({ data, location }) => {
   }
 
   const Button = styled.button`
-    background-color: #627264;
-    border-radius: 5px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-    color: white;
-    margin: 15px 0 0 5px;
-    padding: 5px 25px;
+    color: #627264;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    :focus {
+      outline:0;
+    }
   `
 
   return (
@@ -40,27 +41,35 @@ const Sketches = ({ data, location }) => {
 
       {showDialog && (
         <DialogOverlay
-          style={{
-            background: "hsla(0, 100%, 100%, 0.9)",
-          }}
+          css={css`
+            background: hsla(0, 100%, 100%, 0.9);
+          `}
         >
           <DialogContent
-            style={{
-              padding: "25px",
-              border: "1px solid grey",
-              borderRadius: "5px",
-              boxShadow: "0px 3px 15px rgba(0,0,0,0.3)",
-            }}
+            css={css`
+              padding: 5px 25px;
+              border: 1px solid silver;
+              border-radius: 5px;
+              box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+            `}
           >
+          <div css={css`
+            display: flex;
+            flex-direction: row-reverse;
+          `}>
+            <Button
+              type="button"
+              onClick={() => setShowDialog(false)}
+            >
+              <span aria-hidden="true">&times;</span>
+            </Button>
+          </div>
             <Sketch sketch={selectedSketch} />
             <p>Some details about the sketch</p>
-            <Button type="button" onClick={() => setShowDialog(false)}>
-              Close
-            </Button>
+
           </DialogContent>
         </DialogOverlay>
       )}
-      <Link to="/">Go back to the gallery</Link>
     </React.Fragment>
   )
 }

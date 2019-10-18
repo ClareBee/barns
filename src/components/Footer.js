@@ -8,8 +8,10 @@ const Footer = styled.footer`
   bottom: 0;
   a {
     text-decoration: none;
+    color: #B3B2B6;
+
     &:hover {
-      color: ;
+      color: #627264;
     }
   }
   @media (max-width: 1200px) {

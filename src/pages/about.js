@@ -2,6 +2,8 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/SeoDetails"
+import MyMap from "../components/Map"
+
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
@@ -14,6 +16,7 @@ const Text = styled.p`
 `
 
 const About = ({ data }) => {
+  console.log(data)
   return (
     <React.Fragment>
       <SEO title="About" />
@@ -44,6 +47,8 @@ const About = ({ data }) => {
         Turpis egestas pretium aenean pharetra magna ac placerat vestibulum
         lectus.
       </Text>
+      <MyMap allBarns={data.barns}></MyMap>
+
     </React.Fragment>
   )
 }
@@ -55,6 +60,16 @@ export const query = graphql`
       childImageSharp {
         fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    barns: allBarnsJson {
+      edges {
+        node {
+          id
+          name
+          lat
+          long
         }
       }
     }
