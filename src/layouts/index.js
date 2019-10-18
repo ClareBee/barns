@@ -1,29 +1,39 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
-// import { ThemeProvider } from "emotion-theming"
+import { ThemeProvider } from "emotion-theming"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import theme from "../utils/theme"
 import SideNav from "../components/Sidenav"
 import SiteFooter from "../components/Footer"
-import "./layout.css"
+import "../styles/layout.css"
 import Transition from "../components/Transition"
+import {
+  space,
+  color,
+  fontSize,
+  width,
+  fontWeight,
+  lineHeight,
+} from "styled-system"
 
+console.log('theme', theme)
 const Container = styled.div`
   height: 100vh;
   display: grid;
-  background-colour: #EFF7F4;
   grid-template-columns: 375px 1fr;
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 `
 const PageBody = styled.main`
-  background-colour: #EFF7F4;
   padding: 50px 100px;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
+  }
+  @media (max-width: 1000px){
+    padding: 5px 25px;
   }
 `
 
@@ -40,17 +50,17 @@ const Layout = ({ children, location }) => (
       }
     `}
     render={data => (
-      <React.Fragment>
+      <ThemeProvider theme={theme}>
         <Global
           styles={css`
             h1, a {
-              color: #627264;
+              color: ${theme.colors.granite};
             }
             a {
               transition: all .3s ease-in-out;
             }
             a:hover {
-              color: #A2708A;
+              color: ${theme.colors.mountbattenPink};
             }
             h2, h3 {
               color: #B3B2B6;
@@ -67,7 +77,7 @@ const Layout = ({ children, location }) => (
           </PageBody>
           <SiteFooter />
         </Container>
-      </React.Fragment>
+      </ThemeProvider>
     )}
   />
 )

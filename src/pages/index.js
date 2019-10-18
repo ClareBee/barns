@@ -24,7 +24,7 @@ const Gallery = props => {
         `}
       >
         {barns.map(barn => (
-          <React.Fragment>
+          <React.Fragment key={barn.node.id}>
           <Link to={barn.node.slug} key={barn.node.id}>
             <Img
               fluid={barn.node.image.src.childImageSharp.fluid}
@@ -40,10 +40,9 @@ const Gallery = props => {
               `}
             />
           </Link>
-          <p css={css`
+          <h3 css={css`
             color: #B3B2B6;
-            font-weight: bold;
-          `}>{barn.node.name}</p>
+          `}>{barn.node.name}</h3>
           </React.Fragment>
         ))}
       </div>

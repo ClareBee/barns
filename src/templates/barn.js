@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Img from "gatsby-image"

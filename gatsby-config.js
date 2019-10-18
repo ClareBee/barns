@@ -77,7 +77,7 @@ module.exports = {
         background_color: `#ECEBF6`,
         theme_color: `#ECEBF6`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/logo2.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-emotion`,
@@ -86,9 +86,8 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       }
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    `gatsby-plugin-offline`,
   ],
 }

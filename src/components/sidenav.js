@@ -1,5 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
@@ -30,11 +31,11 @@ const ListLink = props => (
 
 const NavHeader = styled.header`
   margin-bottom: 1rem;
-  border: 2px solid #BAC7BE;
-  padding: 1rem;
+  border: 4px solid #BAC7BE;
+  padding: 0.5rem 1.5rem 1.5rem;
   @media (max-width: 1000px) {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 25px;
   }
 `
 const Aside = styled.aside`
@@ -61,13 +62,15 @@ const List = styled.ul`
   list-style: none;
   float: right;
   text-align: right;
+  margin-right: -10px;
 `
 
 const headerLink = css`
   color: #FDFDFF;
   background-color: #565656;
   font-size: 2.5rem;
-  font-family: 'Helvetica Neue';
+  font-family: "Avenir Next";
+  font-weight: bold;
   color: transparent;
   text-shadow: 0px 2px 3px rgba(255,255,255,0.4);
   -webkit-background-clip: text;
@@ -80,24 +83,42 @@ const headerLink = css`
   }
 `
 
-const SideNav = ({ siteTitle }) => {
-  return (
-    <Aside>
-      <NavHeader>
-        <h1>
+export default ({ siteTitle }) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        logoImage: file(relativePath: { eq: "logo2.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 80) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Aside>
+        <NavHeader>
           <Link to="/" css={headerLink}>
             {siteTitle}
           </Link>
-        </h1>
-      </NavHeader>
-      <List>
-        <ListLink to="/">Gallery</ListLink>
-        <ListLink to="/sketches">Sketches</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
-      </List>
-    </Aside>
+          <Img
+            css={css`
+              width: 80px;
+              float: right;
+              opacity: 0.6;
+              margin-right: 20px;
+            `}
+            fluid={data.logoImage.childImageSharp.fluid}
+          />
+        </NavHeader>
+        <List>
+          <ListLink to="/">Gallery</ListLink>
+          <ListLink to="/sketches">Sketches</ListLink>
+          <ListLink to="/about/">About</ListLink>
+          <ListLink to="/contact/">Contact</ListLink>
+        </List>
+      </Aside>
+    )}
+    />
   )
-}
-
-export default SideNav
