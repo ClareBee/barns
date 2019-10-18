@@ -23,8 +23,6 @@ const getTransitionStyles = {
 class Transition extends React.PureComponent {
   render() {
     const { children, location } = this.props
-    console.log("children", children)
-    console.log("location", location)
     return (
       <TransitionGroup>
         <ReactTransition

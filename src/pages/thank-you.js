@@ -1,10 +1,10 @@
 import React from "react"
+import Header from "../components/Header"
 
 const ThankYouPage = () => (
-  <div>
-    <h1>Contact</h1>
-    <p>Thanks for contacting us!</p>
-  </div>
+  <React.Fragment>
+    <Header title="Thank You" subtitle="Thanks for contacting us" />
+  </React.Fragment>
 )
 
 export default ThankYouPage

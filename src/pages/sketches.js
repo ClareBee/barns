@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Link, graphql } from "gatsby"
 import SEO from "../components/SeoDetails"
+import Header from "../components/Header"
 import Rollerdeck from "../components/Rollerdeck"
 import Sketch from "../components/Sketch"
 import { DialogOverlay, DialogContent } from "@reach/dialog"
@@ -15,7 +16,6 @@ const Sketches = ({ data, location }) => {
   const barns = data.allBarnsJson.edges
 
   const selectImage = image => {
-    console.log('clicked', image)
     setSelectedSketch(image)
     setShowDialog(true)
   }
@@ -33,7 +33,7 @@ const Sketches = ({ data, location }) => {
   return (
     <React.Fragment>
       <SEO title="Sketches" />
-      <h1>Sketches</h1>
+      <Header title="Sketches" />
       <Rollerdeck
         barnImages={barns}
         selectImage={selectImage}

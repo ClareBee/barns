@@ -13,14 +13,14 @@ import Transition from "../components/Transition"
 const Container = styled.div`
   height: 100vh;
   display: grid;
-  background-colour: #FDFDFF;
+  background-colour: #EFF7F4;
   grid-template-columns: 375px 1fr;
   @media (max-width: 1000px) {
     grid-template-columns: 1fr;
   }
 `
 const PageBody = styled.main`
-  background-colour: #FDFDFF;
+  background-colour: #EFF7F4;
   padding: 50px 100px;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;

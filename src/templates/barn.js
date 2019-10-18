@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Img from "gatsby-image"
+import Header from "../components/Header"
 import Map from "../components/Map"
 
 const header = css`
@@ -15,7 +16,6 @@ const map = css`
   grid-area: map;
 `
 export default ({ data }) => {
-  console.log("data", data)
   const barn = data.barnsJson
   return (
     <div
@@ -45,14 +45,14 @@ export default ({ data }) => {
       `}
     >
       <div css={header}>
-        <h1>{barn.name}</h1>
+        <Header title={barn.name} />
       </div>
       <Img
-        fluid={barn.image.src.childImageSharp.fluid}
+        fixed={barn.image.src.childImageSharp.fixed}
         alt={barn.name}
         css={css`
           grid-area: main;
-          width: 100%;
+          width: auto;
           border-radius: 5px;
           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         `}
@@ -88,8 +88,8 @@ export const query = graphql`
       image {
         src {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 550) {
+              ...GatsbyImageSharpFixed
             }
           }
         }

@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import SEO from "../components/SeoDetails"
+import Header from "../components/Header"
 import { css } from "@emotion/core"
 
 const Gallery = props => {
@@ -9,7 +10,7 @@ const Gallery = props => {
   return (
     <React.Fragment>
       <SEO title="Gallery" />
-      <h1>Gallery</h1>
+      <Header title="Gallery" subtitle="Barns in the Yorkshire Dales"/>
       <div
         css={css`
           display: grid;
@@ -32,7 +33,7 @@ const Gallery = props => {
                 max-width: 750px;
                 border-radius: 5px;
                 box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
-                transition: all .1s ease-out;
+                transition: all .25s ease-out;
                 :hover {
                   opacity: .8;
                 }

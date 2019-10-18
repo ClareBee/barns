@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
 const Form = styled.form`
-  width: 50%;
+  width: 80%;
   @media (max-width: 1000px) {
     width: 100%;
     margin: 0 auto;
@@ -41,30 +41,28 @@ const Button = styled.button`
   padding: 5px 25px;
 `
 
-const ContactForm = () => {
-  return (
-    <Form
-      name="Contact Form"
-      method="POST"
-      data-netlify="true"
-      action="/thank-you"
-    >
-      <Input type="hidden" name="form-name" value="Contact Form" />
-      <FormGroup>
-        <Label>Your Email:</Label>
-        <Input type="email" name="email" />
-      </FormGroup>
-      <FormGroup>
-        <Label>Subject:</Label>
-        <Input type="text" name="subject" />
-      </FormGroup>
-      <FormGroup>
-        <Label>Message:</Label>
-        <Textarea name="message" />
-      </FormGroup>
-      <Button type="submit">Send</Button>
-    </Form>
-  )
-}
+const ContactForm = () => (
+  <Form
+    name="Contact Form"
+    method="POST"
+    data-netlify="true"
+    action="/thank-you"
+  >
+    <Input type="hidden" name="form-name" value="Contact Form" />
+    <FormGroup>
+      <Label>Your Email:</Label>
+      <Input type="email" name="email" />
+    </FormGroup>
+    <FormGroup>
+      <Label>Subject:</Label>
+      <Input type="text" name="subject" />
+    </FormGroup>
+    <FormGroup>
+      <Label>Message:</Label>
+      <Textarea name="message" />
+    </FormGroup>
+    <Button type="submit">Send</Button>
+  </Form>
+)
 
 export default ContactForm
