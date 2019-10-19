@@ -24,11 +24,16 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-react-leaflet`,
     {
     resolve: `gatsby-plugin-layout`,
       options: {
         component: require.resolve(`./src/layouts/index.js`),
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-leaflet`,
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       },
     },
     `gatsby-transformer-json`,
