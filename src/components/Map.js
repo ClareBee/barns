@@ -51,7 +51,7 @@ export default class MyMap extends Component {
       }
     })
     return markers.map(marker => (
-      <Marker position={[marker.lat, marker.long]} key={marker.id}>
+      <Marker position={[marker.lat, marker.long]} key={marker.id} style={{ height: '400px', width: '100%' }}>
         <Popup>{marker.name}</Popup>
       </Marker>
     ))
