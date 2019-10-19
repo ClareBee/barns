@@ -5,10 +5,10 @@ import { ThemeProvider } from "emotion-theming"
 import styled from "@emotion/styled"
 import { Global, css } from "@emotion/core"
 import theme from "../utils/theme"
-import SideNav from "../components/Sidenav"
+import SideNav from "../components/sidenav"
 import SiteFooter from "../components/Footer"
 import "../styles/layout.css"
-import Transition from "../components/Transition"
+import Transition from "../components/transition"
 import {
   space,
   color,
