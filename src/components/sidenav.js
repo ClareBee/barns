@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import logo from "../assets/logo2.png"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 
@@ -84,41 +85,27 @@ const headerLink = css`
 `
 
 export default ({ siteTitle }) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        logoImage: file(relativePath: { eq: "logo2.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 80) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    `}
-    render={data => (
-      <Aside>
-        <NavHeader>
-          <Link to="/" css={headerLink}>
-            {siteTitle}
-          </Link>
-          <Img
-            css={css`
-              width: 80px;
-              float: right;
-              opacity: 0.6;
-              margin-right: 20px;
-            `}
-            fluid={data.logoImage.childImageSharp.fluid}
-          />
-        </NavHeader>
-        <List>
-          <ListLink to="/">Gallery</ListLink>
-          <ListLink to="/sketches">Sketches</ListLink>
-          <ListLink to="/about/">About</ListLink>
-          <ListLink to="/contact/">Contact</ListLink>
-        </List>
-      </Aside>
-    )}
-    />
+    <Aside>
+      <NavHeader>
+        <Link to="/" css={headerLink}>
+          {siteTitle}
+        </Link>
+        <img
+          src={logo}
+          alt="Logo"
+          css={css`
+            width: 80px;
+            float: right;
+            opacity: 0.6;
+            margin-right: 20px;
+          `}
+        />
+      </NavHeader>
+      <List>
+        <ListLink to="/">Gallery</ListLink>
+        <ListLink to="/sketches">Sketches</ListLink>
+        <ListLink to="/about/">About</ListLink>
+        <ListLink to="/contact/">Contact</ListLink>
+      </List>
+    </Aside>
   )

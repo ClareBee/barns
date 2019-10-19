@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
+import sketchbook from "../assets/sketchbook.jpg"
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import MyMap from "../components/Map"
@@ -20,8 +21,8 @@ const About = ({ data }) => (
   <React.Fragment>
     <SEO title="About" />
     <Header title="About" />
-    <Img
-      fluid={data.image.childImageSharp.fluid}
+    <img
+      src={sketchbook}
       alt="Sketchbook"
       css={css`
         max-width: 400px;
@@ -53,13 +54,6 @@ export default About
 
 export const query = graphql`
   query {
-    image: file(relativePath: { regex: "/sketchbook/" }) {
-      childImageSharp {
-        fluid(maxWidth: 300) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     barns: allBarnsJson {
       edges {
         node {

@@ -1,11 +1,22 @@
 [
   {
-    "id": "1685001452849004065",
+    "id": "1685001452849004064",
     "type": "GraphImage",
     "name": "Newby Barn",
     "slug": "/newbybrn/",
     "image": {
       "src": "../images/newbybrn.jpg"
+    },
+    "lat": 54.1275990177612,
+    "long": -2.43310303309547
+  },
+  {
+    "id": "1685001452849004065",
+    "type": "GraphImage",
+    "name": "Arncliffe Barn",
+    "slug": "/arncliffe/",
+    "image": {
+      "src": "../images/arncliffe.jpg"
     },
     "lat": 54.1275990177612,
     "long": -2.43310303309547

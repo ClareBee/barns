@@ -24,6 +24,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-react-leaflet`,
     {
     resolve: `gatsby-plugin-layout`,
       options: {
@@ -62,12 +63,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     {
-      resolve: `gatsby-plugin-react-leaflet`,
-      options: {
-        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`, //update this
       options: {
         name: `Disappearing Barns`,
@@ -77,7 +72,7 @@ module.exports = {
         background_color: `#ECEBF6`,
         theme_color: `#ECEBF6`,
         display: `minimal-ui`,
-        icon: `src/images/logo2.png`, // This path is relative to the root of the site.
+        icon: `src/images/arncliffe.jpg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-emotion`,

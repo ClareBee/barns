@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import { css } from "@emotion/core"
+import './map.css'
 
 export default class MyMap extends Component {
   constructor(props) {
