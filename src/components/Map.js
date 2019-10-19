@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import { css } from "@emotion/core"
+import 'leaflet/dist/leaflet.css'
 import './map.css'
 
 export default class MyMap extends Component {
@@ -75,7 +76,7 @@ export default class MyMap extends Component {
     return (
       <React.Fragment>
         {typeof window !== "undefined" ? (
-          <Map ref={this.mapRef} center={position} zoom={zoom} css={map}>
+          <Map ref={this.mapRef} center={position} zoom={zoom} >
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
