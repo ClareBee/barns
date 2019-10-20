@@ -51,10 +51,7 @@ export default class MyMap extends Component {
       }
     })
     return markers.map(marker => (
-      <Marker position={[marker.lat, marker.long]} key={marker.id} css={css`
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-        border-radius: 5px;
-      `}>
+      <Marker position={[marker.lat, marker.long]} key={marker.id}>
         <Popup>{marker.name}</Popup>
       </Marker>
     ))
@@ -70,16 +67,15 @@ export default class MyMap extends Component {
       zoom = this.state.zoom
     }
     const name = this.props.barnName
-    const map = css`
-      height: 540px;
-      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
-      border-radius: 5px;
-    `
+  
     console.log("props", this.props)
     return (
       <React.Fragment>
         {typeof window !== "undefined" ? (
-          <Map ref={this.mapRef} center={position} zoom={zoom} >
+          <Map ref={this.mapRef} center={position} zoom={zoom} css={css`
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+          `}>
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

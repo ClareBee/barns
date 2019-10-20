@@ -32,7 +32,7 @@ const PageBody = styled.main`
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
   }
-  @media (max-width: 1000px){
+  @media (max-width: 1300px) {
     padding: 5px 25px;
   }
 `
