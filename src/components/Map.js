@@ -3,6 +3,15 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import { css } from "@emotion/core"
 import 'leaflet/dist/leaflet.css'
 import './map.css'
+import L from 'leaflet';
+
+delete L.Icon.Default.prototype._getIconUrl;
+
+L.Icon.Default.mergeOptions({
+    iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+    iconUrl: require('leaflet/dist/images/marker-icon.png'),
+    shadowUrl: require('leaflet/dist/images/marker-shadow.png')
+});
 
 export default class MyMap extends Component {
   constructor(props) {
@@ -67,7 +76,7 @@ export default class MyMap extends Component {
       zoom = this.state.zoom
     }
     const name = this.props.barnName
-  
+
     console.log("props", this.props)
     return (
       <React.Fragment>
