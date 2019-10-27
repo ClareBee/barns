@@ -20,7 +20,7 @@ const Container = styled.div`
   }
 `
 const PageBody = styled.main`
-  padding: 50px 100px;
+  padding: 40px 100px;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
   }

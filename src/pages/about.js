@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
 import sketchbook from "../assets/sketchbook.jpg"
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
@@ -27,7 +26,7 @@ const About = props => (
       alt="Sketchbook"
       css={css`
         width: 400px;
-        margin: 50px 0;
+        margin: 25px 0;
         box-shadow: ${props.theme.boxShadow};
         border-radius: 5px;
         @media (max-width: ${props.theme.breakpoints.sm}) {

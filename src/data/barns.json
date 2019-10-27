@@ -9,7 +9,8 @@
       "src": "../images/newby_barn.jpg"
     },
     "lat": 54.1275990177612,
-    "long": -2.43310303309547
+    "long": -2.43310303309547,
+    "description": "Located just off the A65. Now almost completely collapsed."
   },
   {
     "id": "1685001452849004065",
@@ -21,7 +22,8 @@
       "src": "../images/arncliffe_barn.jpg"
     },
     "lat": 54.1275990177612,
-    "long": -2.43310303309547
+    "long": -2.43310303309547,
+    "description": ""
   },
   {
     "id": "1677771511187112566",
@@ -33,7 +35,8 @@
       "src": "../images/stainforth_barns.jpg"
     },
     "lat": 54.107357,
-    "long": -2.289104
+    "long": -2.289104,
+    "description": ""
   },
   {
     "id": "1677771511187112567",
@@ -45,7 +48,8 @@
       "src": "../images/husbands_barn.jpg"
     },
     "lat": 54.093015,
-    "long": -2.272184
+    "long": -2.272184,
+    "description": "Now a private house."
   },
   {
     "id": "1677771511187112568",
@@ -57,7 +61,8 @@
       "src": "../images/sunny_bank_barn.jpg"
     },
     "lat": 54.093015,
-    "long": -2.272184
+    "long": -2.272184,
+    "description": ""
   },
   {
     "id": "1677771511187112569",
@@ -69,7 +74,8 @@
       "src": "../images/wharfe_barn.jpg"
     },
     "lat": 54.118936,
-    "long": -2.330497
+    "long": -2.330497,
+    "description": ""
   },
   {
     "id": "1677771511187112570",
@@ -81,7 +87,8 @@
       "src": "../images/angram_barns.jpg"
     },
     "lat": 54.118936,
-    "long": -2.330497
+    "long": -2.330497,
+    "description": ""
   },
   {
     "id": "1677771511187112571",
@@ -93,7 +100,8 @@
       "src": "../images/crow_nest_barn.jpg"
     },
     "lat": 54.118936,
-    "long": -2.330497
+    "long": -2.330497,
+    "description": ""
   },
   {
     "id": "1677771511187112572",
@@ -105,6 +113,7 @@
       "src": "../images/cross_streets_barn.jpg"
     },
     "lat": 54.118936,
-    "long": -2.330497
+    "long": -2.330497,
+    "description": ""
   }
 ]

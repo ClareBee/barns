@@ -2,7 +2,7 @@ import React from "react"
 import styled from "@emotion/styled"
 
 const Form = styled.form`
-  width: 80%;
+  width: 85%;
   @media (max-width: 1000px) {
     width: 100%;
     margin: 0 auto;
@@ -34,10 +34,15 @@ const Textarea = styled.textarea`
 const Button = styled.button`
   background-color: #627264;
   border-radius: 5px;
+  cursor: pointer;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
   color: white;
-  margin: 15px 0 0 5px;
+  margin: 25px 0 0 5px;
   padding: 5px 25px;
+  transition: all .3s ease-in-out;
+  &:hover {
+    opacity: .8;
+  }
 `
 
 const ContactForm = () => (
