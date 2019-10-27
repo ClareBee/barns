@@ -73,6 +73,18 @@
   },
   {
     "id": "1677771511187112570",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Angram Barns",
+    "slug": "/angram_barns/",
+    "image": {
+      "src": "../images/angram_barns.jpg"
+    },
+    "lat": 54.118936,
+    "long": -2.330497
+  },
+  {
+    "id": "1677771511187112571",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Crow Nest Barn",
@@ -84,7 +96,7 @@
     "long": -2.330497
   },
   {
-    "id": "1677771511187112571",
+    "id": "1677771511187112572",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Cross Streets Barn",
