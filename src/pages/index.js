@@ -4,8 +4,10 @@ import Img from "gatsby-image"
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import { css } from "@emotion/core"
+import { withTheme } from "emotion-theming"
 
 const Gallery = props => {
+  console.log('props', props)
   const barns = props.data.allBarnsJson.edges
   return (
     <React.Fragment>
@@ -17,7 +19,7 @@ const Gallery = props => {
           grid-template-columns: 550px 1fr;
           grid-gap: 100px;
           margin: 75px 0;
-          @media (max-width: 1300px) {
+          @media (max-width: ${props.theme.breakpoints.lg}) {
             grid-template-columns: 1fr;
             grid-gap: 50px;
           }
@@ -32,7 +34,7 @@ const Gallery = props => {
               css={css`
                 max-width: 750px;
                 border-radius: 5px;
-                box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+                box-shadow: ${props.theme.boxShadow};
                 transition: all .25s ease-out;
                 :hover {
                   opacity: .8;
@@ -41,7 +43,7 @@ const Gallery = props => {
             />
           </Link>
           <h3 css={css`
-            color: #B3B2B6;
+            color: ${props.theme.ashGrey};
           `}>{barn.node.name}</h3>
           </React.Fragment>
         ))}
@@ -50,7 +52,7 @@ const Gallery = props => {
   )
 }
 
-export default Gallery
+export default withTheme(Gallery)
 
 export const query = graphql`
   query {

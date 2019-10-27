@@ -2,17 +2,18 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
+import { withTheme } from "emotion-theming"
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
   margin-bottom: 10px;
-  @media (max-width: 1300px) {
+  @media (max-width: ${props => props.theme.breakpoints.lg}) {
     grid-template-columns: repeat(2, 1fr);
   }
 `
-const Rollerdeck = ({ barnImages, selectImage }) => {
+const Rollerdeck = ({ barnImages, selectImage, theme }) => {
   return (
     <Container>
       {barnImages.map(image => (
@@ -27,7 +28,7 @@ const Rollerdeck = ({ barnImages, selectImage }) => {
               background-size: cover;
               overflow: hidden;
               border-radius: 5px;
-              box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
+              box-shadow: ${theme.boxShadow};
               cursor: pointer;
               transition: all .1s ease-out;
               :hover {
@@ -42,4 +43,4 @@ const Rollerdeck = ({ barnImages, selectImage }) => {
   )
 }
 
-export default Rollerdeck
+export default withTheme(Rollerdeck)

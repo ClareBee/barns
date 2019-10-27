@@ -13,7 +13,8 @@ const theme = {
     256,
   ],
   colors: {
-    lightGrey: `#BAC7BE`,
+    lightGrey: `#D5D5D7`,
+    lightGreyGreen: `#BAC7BE`,
     granite: `#627264`,
     olive: `#3A3C3F`,
     offWhite: `#FDFDFF`,
@@ -22,7 +23,8 @@ const theme = {
   },
   breakpoints: [
     '768px', '1000px', '1300px', '1400px'
-  ]
+  ],
+  boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.3)`
 }
 // aliases
 theme.breakpoints.sm = theme.breakpoints[0]

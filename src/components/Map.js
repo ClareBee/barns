@@ -1,11 +1,9 @@
 import React, { Component } from "react"
 import { Map, TileLayer, Marker, Popup } from "react-leaflet"
 import { css } from "@emotion/core"
-import 'leaflet/dist/leaflet.css'
-import './map.css'
-import L from 'leaflet'
-
-
+import "leaflet/dist/leaflet.css"
+import "../styles/map.css"
+import L from "leaflet"
 
 export default class MyMap extends Component {
   constructor(props) {
@@ -46,7 +44,6 @@ export default class MyMap extends Component {
 
   formatMarkers() {
     delete L.Icon.Default.prototype._getIconUrl;
-    console.log(L)
     L.Icon.Default.mergeOptions({
         iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
         iconUrl: require('leaflet/dist/images/marker-icon.png'),
@@ -78,7 +75,6 @@ export default class MyMap extends Component {
     }
     const name = this.props.barnName
 
-    console.log("props", this.props)
     return (
       <React.Fragment>
         {typeof window !== "undefined" ? (

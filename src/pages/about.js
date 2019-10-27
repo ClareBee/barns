@@ -8,16 +8,17 @@ import MyMap from "../components/Map"
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
+import { withTheme } from "emotion-theming"
 
 const Text = styled.p`
   line-height: 1.5rem;
   ::first-letter {
     font-size: 200%;
     font-weight: bold;
-    color: #A2708A;
+    color: ${props => props.theme.colors.mountbattenPink};
 `
 
-const About = ({ data }) => (
+const About = props => (
   <React.Fragment>
     <SEO title="About" />
     <Header title="About" />
@@ -27,7 +28,7 @@ const About = ({ data }) => (
       css={css`
         max-width: 400px;
         margin: 50px 0;
-        box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: ${props.theme.boxShadow};
         border-radius: 5px;
       `}
     />
@@ -47,10 +48,10 @@ const About = ({ data }) => (
       Turpis egestas pretium aenean pharetra magna ac placerat vestibulum
       lectus.
     </Text>
-    <MyMap allBarns={data.barns}></MyMap>
+    <MyMap allBarns={props.data.barns}></MyMap>
   </React.Fragment>
 )
-export default About
+export default withTheme(About)
 
 export const query = graphql`
   query {

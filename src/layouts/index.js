@@ -9,14 +9,6 @@ import SideNav from "../components/sidenav"
 import SiteFooter from "../components/Footer"
 import "../styles/layout.css"
 import Transition from "../components/transition"
-import {
-  space,
-  color,
-  fontSize,
-  width,
-  fontWeight,
-  lineHeight,
-} from "styled-system"
 
 console.log('theme', theme)
 const Container = styled.div`
@@ -63,10 +55,10 @@ const Layout = ({ children, location }) => (
               color: ${theme.colors.mountbattenPink};
             }
             h2, h3 {
-              color: #B3B2B6;
+              color: ${theme.colors.ashGrey};
             }
             h4, h5, p, label {
-              color: #3A3C3F;
+              color: ${theme.colors.olive};
             }
           `}
         />

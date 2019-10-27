@@ -9,8 +9,9 @@ import "@reach/dialog/styles.css"
 
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { withTheme } from "emotion-theming"
 
-const Sketches = ({ data, location }) => {
+const Sketches = ({ data, location, theme }) => {
   const [selectedSketch, setSelectedSketch] = useState(false)
   const [showDialog, setShowDialog] = useState(false)
   const barns = data.allBarnsJson.edges
@@ -21,12 +22,12 @@ const Sketches = ({ data, location }) => {
   }
 
   const Button = styled.button`
-    color: #627264;
+    color: ${props => props.theme.colors.granite};
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
     :focus {
-      outline:0;
+      outline: 0;
     }
   `
 
@@ -48,9 +49,9 @@ const Sketches = ({ data, location }) => {
           <DialogContent
             css={css`
               padding: 5px 25px;
-              border: 1px solid silver;
+              border: 1px solid ${theme.colors.lightGrey};
               border-radius: 5px;
-              box-shadow: 0px 3px 15px rgba(0,0,0,0.3);
+              box-shadow: ${theme.boxShadow};
             `}
           >
           <div css={css`
@@ -74,7 +75,7 @@ const Sketches = ({ data, location }) => {
   )
 }
 
-export default Sketches
+export default withTheme(Sketches)
 
 export const query = graphql`
   query {

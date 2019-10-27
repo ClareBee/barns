@@ -33,7 +33,6 @@
     "react-leaflet": "^2.5.0",
     "react-transition-group": "^4.2.1",
     "react-typography": "^0.16.19",
-    "styled-system": "^5.0.16",
     "typography": "^0.16.19"
   },
   "devDependencies": {

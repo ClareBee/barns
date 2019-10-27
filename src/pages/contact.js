@@ -5,17 +5,18 @@ import Header from "../components/Header"
 import ContactForm from "../components/ContactForm"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { withTheme } from "emotion-theming"
 
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 100px);
-  @media (max-width: 1300px){
+  @media (max-width: ${props => props.theme.breakpoints.lg}){
     grid-template-columns: 1fr;
     grid-template-rows: auto;
   }
 `
-export default ({ data }) => (
+const Contact = props => (
   <Container>
     <div>
       <SEO title="Contact" />
@@ -44,3 +45,5 @@ export default ({ data }) => (
 
   </Container>
 )
+
+export default withTheme(Contact)
