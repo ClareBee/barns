@@ -77,7 +77,7 @@ module.exports = {
         background_color: `#ECEBF6`,
         theme_color: `#ECEBF6`,
         display: `minimal-ui`,
-        icon: `src/images/arncliffe.jpg`, // This path is relative to the root of the site.
+        icon: `src/assets/logo2.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-emotion`,

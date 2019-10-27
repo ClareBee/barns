@@ -1,11 +1,12 @@
 [
   {
     "id": "1685001452849004064",
+    "format": "painting",
     "type": "GraphImage",
     "name": "Newby Barn",
-    "slug": "/newbybrn/",
+    "slug": "/newby_barn/",
     "image": {
-      "src": "../images/newbybrn.jpg"
+      "src": "../images/newby_barn.jpg"
     },
     "lat": 54.1275990177612,
     "long": -2.43310303309547
@@ -13,21 +14,23 @@
   {
     "id": "1685001452849004065",
     "type": "GraphImage",
+    "format": "painting",
     "name": "Arncliffe Barn",
-    "slug": "/arncliffe/",
+    "slug": "/arncliffe_barn/",
     "image": {
-      "src": "../images/arncliffe.jpg"
+      "src": "../images/arncliffe_barn.jpg"
     },
     "lat": 54.1275990177612,
     "long": -2.43310303309547
   },
   {
     "id": "1677771511187112566",
+    "format": "painting",
     "type": "GraphImage",
     "name": "Stainforth Barns",
-    "slug": "/stainforth/",
+    "slug": "/stainforth_barns/",
     "image": {
-      "src": "../images/stainforth.jpg"
+      "src": "../images/stainforth_barns.jpg"
     },
     "lat": 54.107357,
     "long": -2.289104
@@ -35,32 +38,59 @@
   {
     "id": "1677771511187112567",
     "type": "GraphImage",
+    "format": "painting",
     "name": "Husband's Barn",
-    "slug": "/husbands/",
+    "slug": "/husbands_barn/",
     "image": {
-      "src": "../images/husbands.jpg"
+      "src": "../images/husbands_barn.jpg"
     },
     "lat": 54.093015,
     "long": -2.272184
   },
   {
     "id": "1677771511187112568",
+    "format": "painting",
     "type": "GraphImage",
     "name": "Little Sunny Bank Barn",
-    "slug": "/barnpyg2/",
+    "slug": "/sunny_bank_barn/",
     "image": {
-      "src": "../images/barnpyg2.jpg"
+      "src": "../images/sunny_bank_barn.jpg"
     },
     "lat": 54.093015,
     "long": -2.272184
   },
   {
     "id": "1677771511187112569",
+    "format": "painting",
     "type": "GraphImage",
     "name": "Wharfe Barn",
-    "slug": "/wharfe/",
+    "slug": "/wharfe_barn/",
     "image": {
-      "src": "../images/wharfe.jpg"
+      "src": "../images/wharfe_barn.jpg"
+    },
+    "lat": 54.118936,
+    "long": -2.330497
+  },
+  {
+    "id": "1677771511187112570",
+    "format": "sketch",
+    "type": "GraphImage",
+    "name": "Crow Nest Barn",
+    "slug": "/crow_nest_barn/",
+    "image": {
+      "src": "../images/crow_nest_barn.jpg"
+    },
+    "lat": 54.118936,
+    "long": -2.330497
+  },
+  {
+    "id": "1677771511187112571",
+    "format": "sketch",
+    "type": "GraphImage",
+    "name": "Cross Streets Barn",
+    "slug": "/cross_streets_barn/",
+    "image": {
+      "src": "../images/cross_streets_barn.jpg"
     },
     "lat": 54.118936,
     "long": -2.330497

@@ -1,9 +1,3 @@
-/* see if this can be deleted */
-div.leaflet-container {
-  height: 540px;
-  width: 540px;
-}
-
 .leaflet-container {
   height: 540px;
   width: 100%;

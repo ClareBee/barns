@@ -78,8 +78,10 @@ const Sketches = ({ data, location, theme }) => {
 export default withTheme(Sketches)
 
 export const query = graphql`
-  query {
-    allBarnsJson {
+  query allSketches {
+    allBarnsJson(filter: {
+      format: { regex: "/sketch/" }
+  }) {
       edges {
         node {
           id

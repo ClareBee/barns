@@ -55,17 +55,20 @@ const Gallery = props => {
 export default withTheme(Gallery)
 
 export const query = graphql`
-  query {
-    allBarnsJson {
+  query allPaintings {
+    allBarnsJson(filter: {
+      format: {regex: "/painting/"}
+    }) {
       edges {
         node {
           id
           name
+          format
           slug
           image {
             src {
               childImageSharp {
-                fluid(maxWidth: 300) {
+                fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid
                 }
               }

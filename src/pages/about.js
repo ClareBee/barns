@@ -26,10 +26,13 @@ const About = props => (
       src={sketchbook}
       alt="Sketchbook"
       css={css`
-        max-width: 400px;
+        width: 400px;
         margin: 50px 0;
         box-shadow: ${props.theme.boxShadow};
         border-radius: 5px;
+        @media (max-width: ${props.theme.breakpoints.sm}) {
+          width: 300px;
+        }
       `}
     />
     <Text>

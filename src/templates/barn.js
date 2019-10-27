@@ -47,11 +47,10 @@ export default ({ data }) => {
         <Header title={barn.name} />
       </div>
       <Img
-        fixed={barn.image.src.childImageSharp.fixed}
+        fluid={barn.image.src.childImageSharp.fluid}
         alt={barn.name}
         css={css`
           grid-area: main;
-          width: auto;
           border-radius: 5px;
           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         `}
@@ -87,8 +86,8 @@ export const query = graphql`
       image {
         src {
           childImageSharp {
-            fixed(width: 550) {
-              ...GatsbyImageSharpFixed
+            fluid(maxWidth: 550) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
