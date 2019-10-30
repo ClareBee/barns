@@ -25,13 +25,15 @@ export default class MyMap extends Component {
   componentDidMount() {
     this.formatMarkers()
     this.setPageType()
+    this.mapRef.current.leafletElement.scrollWheelZoom.disable()
   }
 
   componentDidUpdate() {
     this.mapRef.current.leafletElement.setMinZoom(9)
     this.mapRef.current.leafletElement.setMaxZoom(19)
-    this.mapRef.current.leafletElement.scrollWheelZoom.disable()
-    this.popupRef.current.leafletElement.openPopup()
+    if(this.state.singleBarn){
+      this.popupRef.current.leafletElement.openPopup()
+    }
   }
 
   setPageType() {
