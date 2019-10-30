@@ -11,7 +11,7 @@ import barn from "../assets/disappearing_barn.jpg"
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 100px);
+  grid-template-rows: repeat(4, 100px);
   @media (max-width: ${props => props.theme.breakpoints.lg}){
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -23,7 +23,12 @@ const Contact = props => (
       <SEO title="Contact" />
       <Header title="Contact" subtitle="Feel free to get in touch" />
     </div>
-    <div style={{ textAlign: 'right' }}>
+    <figure css={css`
+      text-align: right;
+      @media (max-width: 1300px){
+        text-align: center;
+      }
+    `}>
       <img
         alt="Disappearing Barn"
         title="Disappearing Barn"
@@ -35,18 +40,34 @@ const Contact = props => (
           grid-column-start: 2;
           grid-row-start: 1;
           grid-row-end: 4;
-          @media (max-width: 1300px){
+          margin: 0;
+          @media (max-width: 1000px){
             grid-column-start: 1;
-            max-width: 200px;
-            margin: 25px 0;
           }
         `}
       />
-    </div>
+      <figcaption css={css`
+        color: #B3B2B6;
+        font-weight: bold;
+      `}>Disappearing Barn, 2019</figcaption>
+    </figure>
     <ContactForm css={css`
       grid-row-start: 1;
-    `}/>
-
+    `} />
+    <div css={css`
+      grid-row-start: 5;
+      grid-column-start: 2;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 2rem;
+      color: #B3B2B6;
+      padding-left: 2rem;
+      border-left: 5px solid #BAC7BE;
+      @media (max-width: 1300px){
+        grid-column-start: 1;
+        margin-top: 40px;
+      }
+      `}>The copyright notice which is displayed in this site indicates that all materials within the site are the intellectual property of the artist Margaret Blackburne (MB). All materials, content and forms contained on this website are the intellectual property of MB and may not be copied, reproduced, distributed or displayed without MB’s express written permission. </div>
   </Container>
 )
 

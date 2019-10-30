@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 
 const Form = styled.form`
   width: 85%;
-  @media (max-width: 1000px) {
+  @media (max-width: 1300px) {
     width: 100%;
     margin: 0 auto;
   }
@@ -18,17 +18,27 @@ const Label = styled.label`
   width: 100%;
 `
 const Input = styled.input`
-  border-color: #B3B2B6;
+  padding: 5px;
+  border: none;
+  color: #3A3C3F;
   border-radius: 5px;
   border-width: 1px;
   margin: 10px 5px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   width: 100%;
+  background-color: #D5D5D7;
 `
 const Textarea = styled.textarea`
-  border-color: #B3B2B6;
+  border: none;
   border-radius: 5px;
+  font-size: 1.25rem;
+  line-height: 2rem;
   margin: 5px;
   width: 100%;
+  height: 200px;
+  color: #3A3C3F;
+  background-color: #D5D5D7;
 `
 
 const Button = styled.button`
