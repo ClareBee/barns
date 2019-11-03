@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from "@emotion/styled"
+import { withTheme } from "emotion-theming"
 
 const Footer = styled.footer`
   position: fixed;
@@ -8,10 +9,10 @@ const Footer = styled.footer`
   bottom: 0;
   a {
     text-decoration: none;
-    color: #B3B2B6;
+    color: ${props => props.theme.colors.ashGrey};
 
     &:hover {
-      color: #627264;
+      color: ${props => props.theme.colors.granite};
     }
   }
   @media (max-width: 1200px) {
@@ -34,4 +35,4 @@ const SiteFooter = () => (
   </Footer>
 )
 
-export default SiteFooter
+export default withTheme(SiteFooter)

@@ -35,7 +35,7 @@ const Contact = props => (
         src={barn}
         css={css`
           max-width: 100%;
-          box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: ${props.theme.boxShadow};
           border-radius: 5px;
           grid-column-start: 2;
           grid-row-start: 1;
@@ -47,7 +47,7 @@ const Contact = props => (
         `}
       />
       <figcaption css={css`
-        color: #B3B2B6;
+        color: ${props.theme.colors.ashGrey};
         font-weight: bold;
       `}>Disappearing Barn, 2019</figcaption>
     </figure>
@@ -60,9 +60,9 @@ const Contact = props => (
       font-style: italic;
       font-weight: bold;
       line-height: 2rem;
-      color: #B3B2B6;
+      color: ${props.theme.colors.ashGrey};
       padding-left: 2rem;
-      border-left: 5px solid #BAC7BE;
+      border-left: 5px solid ${props.theme.colors.lightGreyGreen};
       @media (max-width: 1300px){
         grid-column-start: 1;
         margin-top: 40px;

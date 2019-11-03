@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { withTheme } from "emotion-theming"
 
 const Form = styled.form`
   width: 85%;
@@ -11,23 +12,22 @@ const Form = styled.form`
 const FormGroup = styled.div`
   margin-top: 10px;
 `
-
 const Label = styled.label`
-  color: #627264;
+  color: ${props => props.theme.colors.granite};
   font-weight: bold;
   width: 100%;
 `
 const Input = styled.input`
   padding: 5px;
   border: none;
-  color: #3A3C3F;
+  color: ${props => props.theme.colors.olive};
   border-radius: 5px;
   border-width: 1px;
   margin: 10px 5px;
   font-size: 1.25rem;
   line-height: 2rem;
   width: 100%;
-  background-color: #D5D5D7;
+  background-color: ${props => props.theme.colors.lightGrey};
 `
 const Textarea = styled.textarea`
   border: none;
@@ -37,15 +37,14 @@ const Textarea = styled.textarea`
   margin: 5px;
   width: 100%;
   height: 200px;
-  color: #3A3C3F;
-  background-color: #D5D5D7;
+  color: ${props => props.theme.colors.olive};
+  background-color: ${props => props.theme.colors.lightGrey};
 `
-
 const Button = styled.button`
-  background-color: #627264;
+  background-color: ${props => props.theme.colors.granite};
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: ${props => props.theme.boxShadow};
   color: white;
   margin: 25px 0 0 5px;
   padding: 5px 25px;
@@ -79,4 +78,4 @@ const ContactForm = () => (
   </Form>
 )
 
-export default ContactForm
+export default withTheme(ContactForm)

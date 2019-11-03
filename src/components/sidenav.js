@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import logo from "../assets/logo2.png"
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
+import { withTheme } from "emotion-theming"
 
 const menuLink = css`
   margin-right: 1rem;
@@ -14,16 +15,11 @@ const menuLink = css`
   a:hover {
     color: #89868D;
   }
-  a:active {
-    text-decoration: none;
-    background: transparent;
-    color: #A2708A;
-  }
 `
 
 const ListLink = props => (
   <li css={menuLink}>
-    <Link to={props.to} activeStyle={{ color: "#A2708A" }}>
+    <Link to={props.to} activeStyle={{ color: `${props.theme.colors.mountbattenPink}` }}>
       {props.children}
     </Link>
   </li>
@@ -31,7 +27,7 @@ const ListLink = props => (
 
 const NavHeader = styled.header`
   margin-bottom: 1rem;
-  border: 4px solid #BAC7BE;
+  border: 4px solid ${props => props.theme.colors.lightGreyGreen};
   padding: 0.5rem 1.5rem 1.5rem;
   @media (max-width: 1000px) {
     width: 100%;
@@ -48,7 +44,7 @@ const Aside = styled.aside`
   align-items: flex-end;
   padding: 25px;
   background: white;
-  border-right: 2px solid #D5D5D7;
+  border-right: 2px solid ${props => props.theme.colors.lightGrey};
   overflow: scroll;
 
   @media (max-width: 1000px) {
@@ -83,7 +79,7 @@ const headerLink = css`
   }
 `
 
-export default ({ siteTitle }) => (
+const Sidenav = ({ siteTitle, theme }) => (
     <Aside>
       <NavHeader>
         <Link to="/" css={headerLink}>
@@ -101,10 +97,12 @@ export default ({ siteTitle }) => (
         />
       </NavHeader>
       <List>
-        <ListLink to="/">Gallery</ListLink>
-        <ListLink to="/sketches">Sketches</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
+        <ListLink theme={theme} to="/">Gallery</ListLink>
+        <ListLink theme={theme} to="/sketches">Sketches</ListLink>
+        <ListLink theme={theme} to="/about/">About</ListLink>
+        <ListLink theme={theme} to="/contact/">Contact</ListLink>
       </List>
     </Aside>
   )
+
+export default withTheme(Sidenav)
