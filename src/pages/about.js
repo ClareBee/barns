@@ -4,6 +4,7 @@ import sketchbook from "../assets/sketchbook.jpg"
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import MyMap from "../components/Map"
+import Resources from "../components/Resources"
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
@@ -37,14 +38,11 @@ const Text = styled.p`
     font-weight: bold;
     color: ${props => props.theme.colors.mountbattenPink};
 `
-const Resources = styled.ul`
-  font-weight: bold;
-`
 
 const About = props => (
-  <React.Fragment id="top">
+  <React.Fragment>
     <SEO title="About" />
-    <Header title="About" />
+    <Header title="About" id="top"/>
     <Links>
       <li>
         <a href="#artist">The Artist</a>/
@@ -104,19 +102,8 @@ const About = props => (
       </p>
       <a href="#top">Top</a>
     </Section>
-    <Section>
-      <h2>Resources</h2>
-
-      <Resources id="resources">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="http://www.outofoblivion.org.uk/barns.asp"
-        >
-          Out Of Oblivion
-        </a>
-        <br />
-      </Resources>
+    <Section id="resources">
+      <Resources />
       <a href="#top">Top</a>
     </Section>
   </React.Fragment>

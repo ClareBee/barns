@@ -7,7 +7,6 @@ import { css } from "@emotion/core"
 import { withTheme } from "emotion-theming"
 
 const Gallery = props => {
-  console.log("props", props)
   const barns = props.data.allBarnsJson.edges
   return (
     <React.Fragment>

@@ -18,7 +18,7 @@ const theme = {
     granite: `#627264`,
     olive: `#3A3C3F`,
     offWhite: `#FDFDFF`,
-    ashGrey: `#B3B2B6`,
+    ashGrey: `#A3A2A6`,
     mountbattenPink: `#A2708A`,
   },
   breakpoints: ["768px", "1000px", "1300px", "1400px"],

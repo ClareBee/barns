@@ -15,6 +15,11 @@ const menuLink = css`
   a:hover {
     color: #89868d;
   }
+  a:active {
+    text-decoration: none;
+    background: transparent;
+    color: #A2708A;
+  }
 `
 
 const ListLink = props => (
