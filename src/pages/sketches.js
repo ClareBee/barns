@@ -35,10 +35,7 @@ const Sketches = ({ data, location, theme }) => {
     <React.Fragment>
       <SEO title="Sketches" />
       <Header title="Sketches" />
-      <Rollerdeck
-        barnImages={barns}
-        selectImage={selectImage}
-      />
+      <Rollerdeck barnImages={barns} selectImage={selectImage} />
 
       {showDialog && (
         <DialogOverlay
@@ -54,20 +51,18 @@ const Sketches = ({ data, location, theme }) => {
               box-shadow: ${theme.boxShadow};
             `}
           >
-          <div css={css`
-            display: flex;
-            flex-direction: row-reverse;
-          `}>
-            <Button
-              type="button"
-              onClick={() => setShowDialog(false)}
+            <div
+              css={css`
+                display: flex;
+                flex-direction: row-reverse;
+              `}
             >
-              <span aria-hidden="true">&times;</span>
-            </Button>
-          </div>
+              <Button type="button" onClick={() => setShowDialog(false)}>
+                <span aria-hidden="true">&times;</span>
+              </Button>
+            </div>
             <Sketch sketch={selectedSketch} />
             <p>Some details about the sketch</p>
-
           </DialogContent>
         </DialogOverlay>
       )}
@@ -79,9 +74,7 @@ export default withTheme(Sketches)
 
 export const query = graphql`
   query allSketches {
-    allBarnsJson(filter: {
-      format: { regex: "/sketch/" }
-  }) {
+    allBarnsJson(filter: { format: { regex: "/sketch/" } }) {
       edges {
         node {
           id

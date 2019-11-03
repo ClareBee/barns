@@ -10,7 +10,7 @@ import SiteFooter from "../components/Footer"
 import "../styles/layout.css"
 import Transition from "../components/transition"
 
-console.log('theme', theme)
+console.log("theme", theme)
 const Container = styled.div`
   height: 100vh;
   display: grid;
@@ -29,7 +29,6 @@ const PageBody = styled.main`
   }
 `
 
-
 const Layout = ({ children, location }) => (
   <StaticQuery
     query={graphql`
@@ -45,19 +44,24 @@ const Layout = ({ children, location }) => (
       <ThemeProvider theme={theme}>
         <Global
           styles={css`
-            h1, a {
+            h1,
+            a {
               color: ${theme.colors.granite};
             }
             a {
-              transition: all .3s ease-in-out;
+              transition: all 0.3s ease-in-out;
             }
             a:hover {
               color: ${theme.colors.mountbattenPink};
             }
-            h2, h3 {
+            h2,
+            h3 {
               color: ${theme.colors.ashGrey};
             }
-            h4, h5, p, label {
+            h4,
+            h5,
+            p,
+            label {
               color: ${theme.colors.olive};
             }
           `}

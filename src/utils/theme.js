@@ -19,12 +19,10 @@ const theme = {
     olive: `#3A3C3F`,
     offWhite: `#FDFDFF`,
     ashGrey: `#B3B2B6`,
-    mountbattenPink: `#A2708A`
+    mountbattenPink: `#A2708A`,
   },
-  breakpoints: [
-    '768px', '1000px', '1300px', '1400px'
-  ],
-  boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.3)`
+  breakpoints: ["768px", "1000px", "1300px", "1400px"],
+  boxShadow: `0px 2px 8px rgba(0, 0, 0, 0.3)`,
 }
 // aliases
 theme.breakpoints.sm = theme.breakpoints[0]

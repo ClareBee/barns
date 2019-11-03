@@ -26,7 +26,7 @@ const Section = styled.section`
   width: 90%;
   line-height: 2rem;
   margin: 2rem 0;
-  @media (max-width: ${props => props.theme.breakpoints.md}){
+  @media (max-width: ${props => props.theme.breakpoints.md}) {
     width: 100%;
     line-height: 1.5rem;
   }
@@ -72,13 +72,20 @@ const About = props => (
     <Section id="artist">
       <h2>Margaret Blackburne - The Artist</h2>
       <Text>
-        Born and brought up on a Dales farm, I have had a life-long interest in painting and have been especially inspired by landscapes and the natural beauty of the surrounding area.
+        Born and brought up on a Dales farm, I have had a life-long interest in
+        painting and have been especially inspired by landscapes and the natural
+        beauty of the surrounding area.
       </Text>
       <p>
-        Over the years, I have painted many of the barns in the Dales and have become increasingly concerned about the disappearance and decay of many of them. I have been gradually putting together a collection of paintings and sketches as a record of their existence and disappearance.
+        Over the years, I have painted many of the barns in the Dales and have
+        become increasingly concerned about the disappearance and decay of many
+        of them. I have been gradually putting together a collection of
+        paintings and sketches as a record of their existence and disappearance.
       </p>
       <p>
-        This website is intended as an ongoing project to share this collection with a wider audience, so that others may also witness this changing history.
+        This website is intended as an ongoing project to share this collection
+        with a wider audience, so that others may also witness this changing
+        history.
       </p>
       <a href="#top">Top</a>
     </Section>
@@ -87,9 +94,13 @@ const About = props => (
     </Section>
     <Section id="project">
       <h2>Disappearing Barns - The Yorkshire Dales</h2>
-      <Text>There are roughly 4,500 barns dotted around the Yorkshire Dales, most of them built between the 17th and 18th centuries.</Text>
+      <Text>
+        There are roughly 4,500 barns dotted around the Yorkshire Dales, most of
+        them built between the 17th and 18th centuries.
+      </Text>
       <p>
-        Dales barns - also known as laithes - are unusual in being located far from other farm buildings.
+        Dales barns - also known as laithes - are unusual in being located far
+        from other farm buildings.
       </p>
       <a href="#top">Top</a>
     </Section>
@@ -97,7 +108,13 @@ const About = props => (
       <h2>Resources</h2>
 
       <Resources id="resources">
-        <a target="_blank" rel="noopener noreferrer" href="http://www.outofoblivion.org.uk/barns.asp">Out Of Oblivion</a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="http://www.outofoblivion.org.uk/barns.asp"
+        >
+          Out Of Oblivion
+        </a>
         <br />
       </Resources>
       <a href="#top">Top</a>

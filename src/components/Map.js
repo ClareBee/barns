@@ -31,7 +31,7 @@ export default class MyMap extends Component {
   componentDidUpdate() {
     this.mapRef.current.leafletElement.setMinZoom(9)
     this.mapRef.current.leafletElement.setMaxZoom(19)
-    if(this.state.singleBarn){
+    if (this.state.singleBarn) {
       this.popupRef.current.leafletElement.openPopup()
     }
   }
@@ -45,12 +45,12 @@ export default class MyMap extends Component {
   }
 
   formatMarkers() {
-    delete L.Icon.Default.prototype._getIconUrl;
+    delete L.Icon.Default.prototype._getIconUrl
     L.Icon.Default.mergeOptions({
-        iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
-        iconUrl: require('leaflet/dist/images/marker-icon.png'),
-        shadowUrl: require('leaflet/dist/images/marker-shadow.png')
-    });
+      iconRetinaUrl: require("leaflet/dist/images/marker-icon-2x.png"),
+      iconUrl: require("leaflet/dist/images/marker-icon.png"),
+      shadowUrl: require("leaflet/dist/images/marker-shadow.png"),
+    })
     const markers = this.props.allBarns.edges.map(({ node }) => {
       return {
         lat: node.lat,
@@ -80,10 +80,15 @@ export default class MyMap extends Component {
     return (
       <React.Fragment>
         {typeof window !== "undefined" ? (
-          <Map ref={this.mapRef} center={position} zoom={zoom} css={css`
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-          `}>
+          <Map
+            ref={this.mapRef}
+            center={position}
+            zoom={zoom}
+            css={css`
+              box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+              border-radius: 5px;
+            `}
+          >
             <TileLayer
               attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

@@ -30,10 +30,10 @@ const Rollerdeck = ({ barnImages, selectImage, theme }) => {
               border-radius: 5px;
               box-shadow: ${theme.boxShadow};
               cursor: pointer;
-              transition: all .1s ease-out;
+              transition: all 0.1s ease-out;
               :hover {
-                transform: scale(.99);
-                opacity: .8;
+                transform: scale(0.99);
+                opacity: 0.8;
               }
             `}
           />

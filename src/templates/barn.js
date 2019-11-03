@@ -55,9 +55,7 @@ export default ({ data }) => {
           box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
         `}
       />
-      <div css={text}>
-        {barn.description}
-      </div>
+      <div css={text}>{barn.description}</div>
       <div css={map}>
         <Map
           lat={barn.lat}

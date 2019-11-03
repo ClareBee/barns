@@ -13,13 +13,16 @@ const menuLink = css`
     text-decoration: none;
   }
   a:hover {
-    color: #89868D;
+    color: #89868d;
   }
 `
 
 const ListLink = props => (
   <li css={menuLink}>
-    <Link to={props.to} activeStyle={{ color: `${props.theme.colors.mountbattenPink}` }}>
+    <Link
+      to={props.to}
+      activeStyle={{ color: `${props.theme.colors.mountbattenPink}` }}
+    >
       {props.children}
     </Link>
   </li>
@@ -62,47 +65,55 @@ const List = styled.ul`
 `
 
 const headerLink = css`
-  color: #FDFDFF;
+  color: #fdfdff;
   background-color: #565656;
   font-size: 2.5rem;
   font-family: "Avenir Next";
   font-weight: bold;
   color: transparent;
-  text-shadow: 0px 2px 3px rgba(255,255,255,0.4);
+  text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.4);
   -webkit-background-clip: text;
-     -moz-background-clip: text;
-          background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
   text-decoration: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   &:hover {
     color: #627264;
   }
 `
 
 const Sidenav = ({ siteTitle, theme }) => (
-    <Aside>
-      <NavHeader>
-        <Link to="/" css={headerLink}>
-          {siteTitle}
-        </Link>
-        <img
-          src={logo}
-          alt="Logo"
-          css={css`
-            width: 80px;
-            float: right;
-            opacity: 0.6;
-            margin-right: 20px;
-          `}
-        />
-      </NavHeader>
-      <List>
-        <ListLink theme={theme} to="/">Gallery</ListLink>
-        <ListLink theme={theme} to="/sketches">Sketches</ListLink>
-        <ListLink theme={theme} to="/about/">About</ListLink>
-        <ListLink theme={theme} to="/contact/">Contact</ListLink>
-      </List>
-    </Aside>
-  )
+  <Aside>
+    <NavHeader>
+      <Link to="/" css={headerLink}>
+        {siteTitle}
+      </Link>
+      <img
+        src={logo}
+        alt="Logo"
+        css={css`
+          width: 80px;
+          float: right;
+          opacity: 0.6;
+          margin-right: 20px;
+        `}
+      />
+    </NavHeader>
+    <List>
+      <ListLink theme={theme} to="/">
+        Gallery
+      </ListLink>
+      <ListLink theme={theme} to="/sketches">
+        Sketches
+      </ListLink>
+      <ListLink theme={theme} to="/about/">
+        About
+      </ListLink>
+      <ListLink theme={theme} to="/contact/">
+        Contact
+      </ListLink>
+    </List>
+  </Aside>
+)
 
 export default withTheme(Sidenav)
