@@ -61,8 +61,10 @@ const Sketches = ({ data, location, theme }) => {
                 <span aria-hidden="true">&times;</span>
               </Button>
             </div>
-            <Sketch sketch={selectedSketch} />
-            <p>Some details about the sketch</p>
+            <figure>
+              <Sketch sketch={selectedSketch} />
+              <figcaption><strong>{selectedSketch.node.name}</strong></figcaption>
+            </figure>
           </DialogContent>
         </DialogOverlay>
       )}
