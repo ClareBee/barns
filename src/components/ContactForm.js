@@ -74,6 +74,9 @@ const ContactForm = () => (
       <Label>Message:</Label>
       <Textarea name="message" />
     </FormGroup>
+    <div>
+      <small>By contacting us, you are agreeing to share your email. We will never share your details with any third party and will delete your data on request.</small>
+    </div>
     <Button type="submit">Send</Button>
   </Form>
 )

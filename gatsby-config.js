@@ -117,7 +117,7 @@ if (process.env.CONTEXT === "production") {
       sampleRate: 5,
       siteSpeedSampleRate: 10,
       cookieDomain: "example.com",
-    },
+    }
   };
   config.plugins.push(googleAnalyticsConfig);
 }
