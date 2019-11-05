@@ -10,20 +10,20 @@
     },
     "lat": 54.1275990177612,
     "long": -2.43310303309547,
-    "description": "Located just off the A65. Now almost completely collapsed."
+    "description": "Located just off the A65. Used to be a house and barn together. Now almost completely collapsed."
   },
   {
     "id": "1685001452849004065",
     "type": "GraphImage",
     "format": "painting",
-    "name": "Arncliffe Barn",
-    "slug": "/arncliffe_barn/",
+    "name": "Thoragill Barn",
+    "slug": "/thoragill_barn/",
     "image": {
-      "src": "../images/arncliffe_barn.jpg"
+      "src": "../images/thoragill_barn.jpg"
     },
-    "lat": 54.1275990177612,
-    "long": -2.43310303309547,
-    "description": ""
+    "lat": 54.126188,
+    "long": -2.170927,
+    "description": "In Arncliffe"
   },
   {
     "id": "1677771511187112566",
@@ -36,7 +36,7 @@
     },
     "lat": 54.107357,
     "long": -2.289104,
-    "description": ""
+    "description": "Above Little Stainforth. Low House Barn and Leys barn. The rooves on both are starting to collapse."
   },
   {
     "id": "1677771511187112567",
@@ -49,7 +49,7 @@
     },
     "lat": 54.093015,
     "long": -2.272184,
-    "description": "Now a private house."
+    "description": "On B6479 between Settle and Stainforth. Now a private house."
   },
   {
     "id": "1677771511187112568",
@@ -60,9 +60,9 @@
     "image": {
       "src": "../images/sunny_bank_barn.jpg"
     },
-    "lat": 54.093015,
-    "long": -2.272184,
-    "description": ""
+    "lat": 54.115436,
+    "long": -2.293750,
+    "description": "The wall and roof are now starting to crumble."
   },
   {
     "id": "1677771511187112569",
@@ -86,9 +86,9 @@
     "image": {
       "src": "../images/angram_barns.jpg"
     },
-    "lat": 54.118936,
-    "long": -2.330497,
-    "description": ""
+    "lat": 54.391351,
+    "long": -2.172543,
+    "description": "Just south of Angram. Both barns starting to go."
   },
   {
     "id": "1677771511187112571",
@@ -101,7 +101,7 @@
     },
     "lat": 54.118936,
     "long": -2.330497,
-    "description": ""
+    "description": "Crow Nest Barn"
   },
   {
     "id": "1677771511187112572",
@@ -114,6 +114,6 @@
     },
     "lat": 54.118936,
     "long": -2.330497,
-    "description": ""
+    "description": "Cross Streets Barn"
   }
 ]
