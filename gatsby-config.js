@@ -23,6 +23,22 @@ const config = {
     twitterUsername: ``
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-151661826-1`,
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: true,
+        // Setting this parameter is optional
+        anonymize: true,
+        // Setting this parameter is also optional
+        respectDNT: true,
+        // Avoids sending pageview hits from custom paths
+        exclude: ["/contact"],
+        // Delays sending pageview hits on route update (in milliseconds)
+        pageTransitionDelay: 250
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
     resolve: `gatsby-plugin-layout`,
@@ -87,23 +103,7 @@ const config = {
         pathToConfigModule: `src/utils/typography`,
       }
     },
-    `gatsby-plugin-offline`,
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-151661826-1",
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: true,
-        // Setting this parameter is optional
-        anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/contact"],
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 250
-      }
-    }
+    `gatsby-plugin-offline`
   ],
 }
 
