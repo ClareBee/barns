@@ -96,7 +96,7 @@ if (process.env.CONTEXT === "production") {
   const googleAnalyticsConfig = {
     resolve: "gatsby-plugin-google-analytics",
     options: {
-      trackingId: "YOUR_GOOGLE_ANALYTICS_TRACKING_ID",
+      trackingId: "UA-151661826-1",
       // Defines where to place the tracking script - `true` in the head and `false` in the body
       head: false,
       // Setting this parameter is optional
@@ -104,7 +104,7 @@ if (process.env.CONTEXT === "production") {
       // Setting this parameter is also optional
       respectDNT: true,
       // Avoids sending pageview hits from custom paths
-      exclude: ["/preview/**", "/do-not-track/me/too/"],
+      exclude: ["/contact"],
       // Delays sending pageview hits on route update (in milliseconds)
       pageTransitionDelay: 250,
       // Enables Google Optimize using your container Id
