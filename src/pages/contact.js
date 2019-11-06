@@ -20,7 +20,10 @@ const Contact = props => (
   <Container>
     <div>
       <SEO title="Contact" />
-      <Header title="Contact" subtitle="Feel free to get in touch" />
+      <Header
+        title="Contact"
+        subtitle="Feel free to get in touch"
+      />
     </div>
     <figure
       css={css`

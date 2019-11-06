@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { withTheme } from "emotion-theming"
 
@@ -75,7 +77,8 @@ const ContactForm = () => (
       <Textarea name="message" />
     </FormGroup>
     <div>
-      <small>By contacting us, you are agreeing to share your email. We will never share your details with any third party and will delete your data on request.</small>
+      <small>By contacting us, you are agreeing to share your email. We will never share this with any Third Party and will delete your data on request.
+      <Link css={css`margin: 0 10px;`} to="/privacy">Privacy Policy</Link></small>
     </div>
     <Button type="submit">Send</Button>
   </Form>

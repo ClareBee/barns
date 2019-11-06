@@ -11,7 +11,11 @@ const Gallery = props => {
   return (
     <React.Fragment>
       <SEO title="Gallery" />
-      <Header title="Gallery" subtitle="Barns in the Yorkshire Dales" />
+      <Header
+        title="Gallery"
+        subtitle="Barns in the Yorkshire Dales"
+        lead="A series of paintings by Margaret Blackburne"
+      />
       <div
         css={css`
           display: grid;

@@ -7,7 +7,7 @@ const config = {
     description: `Barns in the Yorkshire Dales`,
     headline: `Disappearing barns in the Yorkshire Dales`, // Headline for schema.org JSONLD
     author: `@clarie_bee`,
-    url: ``, // site domain, no trailing slash
+    url: `https://www.disappearingbarns.co.uk`, // site domain, no trailing slash
     image: ``,
     banner: ``, // used for SEO
     ogLanguage: 'en_UK',
@@ -16,10 +16,10 @@ const config = {
     copyrightHolder: 'Margaret Blackburne',
     copyrightYear: '2019',
     isFamilyFriendly: true,
-    keywords: ['Yorkshire', 'barns', 'National Park', 'art', 'watercolour', 'artist'],
+    keywords: ['Yorkshire', 'barns', 'National Park', 'art', 'watercolour', 'artist', 'Margaret Blackburne'],
     thumbnailUrl: ``,
     instagram: ``,
-    googleAnalyticsID: ``,
+    googleAnalyticsID: `UA-151661826-1`,
     twitterUsername: ``
   },
   plugins: [
@@ -87,14 +87,13 @@ const config = {
         pathToConfigModule: `src/utils/typography`,
       }
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
     `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "UA-151661826-1",
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
@@ -102,17 +101,7 @@ const config = {
         // Avoids sending pageview hits from custom paths
         exclude: ["/contact"],
         // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 250,
-        // Enables Google Optimize using your container Id
-        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
-        // Enables Google Optimize Experiment ID
-        experimentId: "YOUR_GOOGLE_EXPERIMENT_ID",
-        // Set Variation ID. 0 for original 1,2,3....
-        variationId: "YOUR_GOOGLE_OPTIMIZE_VARIATION_ID",
-        // Any additional optional fields
-        sampleRate: 5,
-        siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
+        pageTransitionDelay: 250
       }
     }
   ],

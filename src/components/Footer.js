@@ -7,8 +7,9 @@ const Footer = styled.footer`
   width: 375px;
   margin: 8px;
   bottom: 0;
+  display: flex;
+  justify-content: space-between;
   a {
-    text-decoration: none;
     color: ${props => props.theme.colors.ashGrey};
 
     &:hover {
