@@ -8,10 +8,11 @@ const Contact = props => (
       <Header title="Privacy" subtitle="This website is GDPR-compliant."/>
     </div>
     <p>
-      We use anonymised Google Analytics for our site which you can block with
+      We use anonymised Google Analytics for our site.
+      You can block this here: <a href="javascript:gaOptout();">Deactivate Google Analytics</a>
     </p>
     <p>
-      If you contact us using our form, we delete your messages after 10 days or earlier if requested.</p>
+      If you contact us using our form, we delete your messages after 10 days or earlier if requested and will never share your email with any Third Party.</p>
   </div>
 )
 
