@@ -16,23 +16,20 @@ const config = {
     copyrightHolder: 'Margaret Blackburne',
     copyrightYear: '2019',
     isFamilyFriendly: true,
-    keywords: ['Yorkshire', 'barns', 'National Park', 'art', 'watercolour', 'artist', 'Margaret Blackburne'],
+    keywords: ['Yorkshire', 'barns', 'National Park', 'art', 'watercolour', 'artist', 'Margaret Blackburne', 'Dales'],
     thumbnailUrl: ``,
     instagram: ``,
     googleAnalyticsID: `UA-151661826-1`,
-    twitterUsername: ``
+    twitterUsername: ``,
+    siteUrl: `https://www.disappearingbarns.co.uk`
   },
   plugins: [
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: `UA-151661826-1`,
-        // Defines where to place the tracking script - `true` in the head and `false` in the body
         head: true,
-        // Setting this parameter is optional
         anonymize: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
         // Avoids sending pageview hits from custom paths
         exclude: ["/contact"],
         // Delays sending pageview hits on route update (in milliseconds)
@@ -103,6 +100,8 @@ const config = {
         pathToConfigModule: `src/utils/typography`,
       }
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     `gatsby-plugin-offline`
   ],
 }
