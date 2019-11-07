@@ -74,7 +74,6 @@ const About = props => (
     <Divider />
     <Img
       fluid={props.data.image.edges[0].node.fluid}
-      fadeIn={false}
       alt="Sketchbook"
       css={css`
         width: 400px;

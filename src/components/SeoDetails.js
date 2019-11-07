@@ -71,7 +71,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
         },
         {
           property: `og:image`,
-          content: `website`,
+          content: image,
         },
         {
           name: `twitter:card`,
