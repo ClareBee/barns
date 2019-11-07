@@ -1,11 +1,13 @@
 import React from "react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
+
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import ContactForm from "../components/ContactForm"
 import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { withTheme } from "emotion-theming"
-import barn from "../assets/disappearing_barn.jpg"
 
 const Container = styled.div`
   display: grid;
@@ -33,23 +35,23 @@ const Contact = props => (
         }
       `}
     >
-      <img
-        alt="Disappearing Barn"
-        title="Disappearing Barn"
-        src={barn}
-        css={css`
-          max-width: 100%;
-          box-shadow: ${props.theme.boxShadow};
-          border-radius: 5px;
-          grid-column-start: 2;
-          grid-row-start: 1;
-          grid-row-end: 4;
-          margin: 0;
-          @media (max-width: 1000px) {
-            grid-column-start: 1;
-          }
-        `}
-      />
+      <Img
+        alt="Disappearing Barn"
+        title="Disappearing Barn"
+        fluid={props.data.allImageSharp.edges[0].node.fluid}
+        css={css`
+          max-width: 100%;
+          box-shadow: ${props.theme.boxShadow};
+          border-radius: 5px;
+          grid-column-start: 2;
+          grid-row-start: 1;
+          grid-row-end: 4;
+          margin: 0;
+          @media (max-width: 1000px) {
+            grid-column-start: 1;
+          }
+        `}
+      />
       <figcaption
         css={css`
           color: ${props.theme.colors.ashGrey};
@@ -91,3 +93,18 @@ const Contact = props => (
 )
 
 export default withTheme(Contact)
+
+export const query = graphql`
+query {
+    allImageSharp(filter: { fields: { slug: { regex: "/disappearing/" }} }) {
+      edges {
+        node {
+          id
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`

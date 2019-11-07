@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import logo from "../assets/logo2.png"
+import Img from "gatsby-image"
+
 import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { withTheme } from "emotion-theming"
@@ -87,22 +88,24 @@ const headerLink = css`
   }
 `
 
-const Sidenav = ({ siteTitle, theme }) => (
+const Sidenav = ({ siteTitle, theme, logo }) => (
   <Aside>
     <NavHeader>
       <Link to="/" css={headerLink}>
         {siteTitle}
       </Link>
-      <img
-        src={logo}
-        alt="Logo"
-        css={css`
-          width: 80px;
-          float: right;
-          opacity: 0.6;
-          margin-right: 20px;
-        `}
-      />
+      <Img
+        fixed={logo}
+        fadeIn={false}
+        alt="Logo"
+        css={css`
+          width: 80px;
+          float: right;
+          opacity: 0.6;
+          margin-right: 20px;
+        `}
+      />
+
     </NavHeader>
     <List>
       <ListLink theme={theme} to="/">

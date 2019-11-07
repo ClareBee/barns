@@ -38,6 +38,17 @@ const Layout = ({ children, location }) => (
             title
           }
         }
+        logo: allImageSharp(filter: {fields: { slug: { regex: "/logo/"} }}) {
+          nodes {
+            id
+            fixed(width: 80) {
+              ...GatsbyImageSharpFixed
+            }
+            fields {
+              slug
+            }
+          }
+        }
       }
     `}
     render={data => (
@@ -67,7 +78,7 @@ const Layout = ({ children, location }) => (
           `}
         />
         <Container>
-          <SideNav siteTitle={data.site.siteMetadata.title} />
+          <SideNav siteTitle={data.site.siteMetadata.title} logo={data.logo.nodes[0].fixed} />
           <PageBody>
             <Transition location={location || ""}>{children}</Transition>
           </PageBody>

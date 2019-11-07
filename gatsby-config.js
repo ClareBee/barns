@@ -8,9 +8,9 @@ const config = {
     headline: `Disappearing barns in the Yorkshire Dales`, // Headline for schema.org JSONLD
     author: `@clarie_bee`,
     url: `https://www.disappearingbarns.co.uk`, // site domain, no trailing slash
-    image: ``,
+    image: `/logo2.png`,
     banner: ``, // used for SEO
-    ogLanguage: 'en_UK',
+    ogLanguage: `en_GB`,
     siteLanguage: `en`,
     contentLocation: 'Yorkshire Dales National Park',
     copyrightHolder: 'Margaret Blackburne',
@@ -90,7 +90,7 @@ const config = {
         background_color: `#ECEBF6`,
         theme_color: `#ECEBF6`,
         display: `minimal-ui`,
-        icon: `src/assets/logo2.png`, // This path is relative to the root of the site.
+        icon: `src/static/logo2.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-emotion`,

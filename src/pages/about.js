@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import sketchbook from "../assets/sketchbook.jpg"
+import Img from "gatsby-image"
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import MyMap from "../components/Map"
@@ -72,20 +72,21 @@ const About = props => (
       </li>
     </Links>
     <Divider />
+    <Img
+      fluid={props.data.image.edges[0].node.fluid}
+      fadeIn={false}
+      alt="Sketchbook"
+      css={css`
+        width: 400px;
+        margin: 25px 0;
+        box-shadow: ${props.theme.boxShadow};
+        border-radius: 5px;
+        @media (max-width: ${props.theme.breakpoints.sm}) {
+          width: 300px;
+        }
+      `}
+    />
 
-    <img
-      src={sketchbook}
-      alt="Sketchbook"
-      css={css`
-        width: 400px;
-        margin: 25px 0;
-        box-shadow: ${props.theme.boxShadow};
-        border-radius: 5px;
-        @media (max-width: ${props.theme.breakpoints.sm}) {
-          width: 300px;
-        }
-      `}
-    />
     <Section id="artist">
       <h2>Margaret Blackburne - The Artist</h2>
       <p>
@@ -163,6 +164,16 @@ export const query = graphql`
           name
           lat
           long
+        }
+      }
+    }
+    image: allImageSharp(filter: { fields: { slug: { regex: "/sketchbook/" } } }) {
+      edges {
+        node {
+          id
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
         }
       }
     }
