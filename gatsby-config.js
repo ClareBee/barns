@@ -20,7 +20,7 @@ const config = {
     thumbnailUrl: ``,
     instagram: ``,
     googleAnalyticsID: `UA-151661826-1`,
-    twitterUsername: ``,
+    twitterUsername: `@clarie_bee`,
     siteUrl: `https://www.disappearingbarns.co.uk`
   },
   plugins: [
