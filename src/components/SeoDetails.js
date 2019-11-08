@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
+function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -21,18 +21,18 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
-
+  const metaTitle = title || site.siteMetadata.title
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={metaTitle}
       link={[{
         rel: `canonical`,
-        href: siteUrl
+        href: site.siteMetadata.siteUrl
       }]}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${metaTitle}`}
       meta={[
         {
           charSet: `utf-8`,
@@ -47,7 +47,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:locale`,
@@ -55,11 +55,11 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
         },
         {
           property: `og:url`,
-          content: siteUrl
+          content: site.siteMetadata.siteUrl,
         },
         {
           property: `og:site_name`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -71,7 +71,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
         },
         {
           property: `og:image`,
-          content: image,
+          content: site.siteMetadata.image,
         },
         {
           name: `twitter:card`,
@@ -83,7 +83,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
@@ -106,7 +106,7 @@ function SEO({ description, lang, meta, keywords, title, siteUrl, image }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: [],
+  keywords: ['Dales', 'Margaret Blackburne', 'Yorkshire Dales', 'barns'],
 }
 
 SEO.propTypes = {

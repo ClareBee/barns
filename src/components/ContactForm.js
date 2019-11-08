@@ -77,8 +77,10 @@ const ContactForm = () => (
       <Textarea name="message" />
     </FormGroup>
     <div>
-      <small>By contacting us, you are agreeing to share your email. We will never share this with any Third Party and will delete your data on request.
-      <Link css={css`margin: 0 10px;`} to="/privacy">Privacy Policy</Link></small>
+      <small>
+        By contacting us, you are agreeing to share your email. We will never share this with any Third Party and will delete your data on request.
+        <Link css={css`margin: 0 10px;`} to="/privacy">Privacy Policy</Link>
+      </small>
     </div>
     <Button type="submit">Send</Button>
   </Form>
