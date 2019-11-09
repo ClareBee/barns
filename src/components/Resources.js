@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby"
 const ResourceList = styled.ul`
   font-weight: bold;
 `
-
 const Resources = (props) => {
   const { allResourcesJson } = useStaticQuery(
     graphql`
@@ -18,14 +17,13 @@ const Resources = (props) => {
         }
       }
     `)
-    console.log(allResourcesJson)
   return (
     <React.Fragment>
       <h2>Resources</h2>
 
       <ResourceList>
         {allResourcesJson.nodes.map(resource => (
-          <li>
+          <li key={resource.href}>
             <a
               target="_blank"
               rel="noopener noreferrer"

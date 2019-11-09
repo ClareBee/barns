@@ -17,9 +17,8 @@ const Rollerdeck = ({ barnImages, selectImage, theme }) => {
   return (
     <Container>
       {barnImages.map(image => (
-        <div onClick={() => selectImage(image)}>
+        <div onClick={() => selectImage(image)} key={image.node.image.src.childImageSharp.fluid.src}>
           <Img
-            key={image.node.image.src.childImageSharp.fluid.src}
             fluid={image.node.image.src.childImageSharp.fluid}
             alt={image.node.name}
             css={css`
