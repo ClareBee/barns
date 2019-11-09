@@ -37,7 +37,7 @@ const ListLink = props => {
     if(location.href === `${props.siteUrl}/`) {
       console.log('home')
       return { className: "active" }
-    } else if (isPartiallyCurrent && (location.href !== props.siteUrl)) {
+    } else if (isPartiallyCurrent && (location.href !== `${props.siteUrl}/`)) {
       console.log('active')
       return { className: "active" }
     } else {
