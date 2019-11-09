@@ -62,7 +62,7 @@ const Gallery = props => {
 export default withTheme(Gallery)
 
 export const query = graphql`
-  query allBarnPaintings {
+  query allPaintings {
     allBarnsJson(filter: { format: { regex: "/painting/" } }) {
       edges {
         node {
