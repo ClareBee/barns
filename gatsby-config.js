@@ -1,6 +1,6 @@
 
 const config = {
-  pathPrefix: '/', // prefix for all links
+  // pathPrefix: '/', // prefix for all links
   siteMetadata: {
     title: `Disappearing Barns`,
     titleAlt: `Dales Barns`, // title for JSONLD

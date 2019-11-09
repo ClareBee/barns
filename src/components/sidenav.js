@@ -17,23 +17,45 @@ const menuLink = css`
   a:hover {
     color: #89868d;
   }
-  a:active {
+  a:active, .active {
     text-decoration: none;
     background: transparent;
     color: #A2708A;
   }
 `
 
-const ListLink = props => (
-  <li css={menuLink}>
+const ListLink = props => {
+  const isPartiallyActive = ({
+    isPartiallyCurrent,
+    href,
+    location,
+  }) => {
+    console.log('href', href)
+    console.log('location', location)
+    console.log('site', props.siteUrl)
+
+    if(location.href === `${props.siteUrl}/`) {
+      console.log('home')
+      return { className: "active" }
+    } else if (isPartiallyCurrent && (location.href !== props.siteUrl)) {
+      console.log('active')
+      return { className: "active" }
+    } else {
+      return null
+    }
+  }
+  console.log('props', isPartiallyActive)
+  return (<li css={menuLink}>
     <Link
       to={props.to}
-      activeStyle={{ color: `${props.theme.colors.mountbattenPink}` }}
+      getProps={isPartiallyActive}
+      // activeStyle={{ color: `${props.theme.colors.mountbattenPink}` }}
     >
       {props.children}
     </Link>
   </li>
 )
+}
 
 const NavHeader = styled.header`
   margin-bottom: 1rem;
@@ -89,7 +111,7 @@ const headerLink = css`
   }
 `
 
-const Sidenav = ({ siteTitle, theme, logo }) => (
+const Sidenav = ({ siteTitle, siteUrl, theme, logo }) => (
   <Aside>
     <NavHeader>
       <Link to="/" css={headerLink}>
@@ -109,10 +131,10 @@ const Sidenav = ({ siteTitle, theme, logo }) => (
 
     </NavHeader>
     <List>
-      <ListLink theme={theme} to="/">
+      <ListLink theme={theme} to="/" siteUrl={siteUrl}>
         Gallery
       </ListLink>
-      <ListLink theme={theme} to="/sketches">
+      <ListLink theme={theme} to="/sketches/">
         Sketches
       </ListLink>
       <ListLink theme={theme} to="/about/">

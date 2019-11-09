@@ -10,7 +10,6 @@ import Transition from "../components/transition"
 import SideNav from "../components/sidenav"
 import SiteFooter from "../components/Footer"
 
-console.log("theme", theme)
 const Container = styled.div`
   height: 100vh;
   display: grid;
@@ -36,6 +35,7 @@ const Layout = ({ children, location }) => (
         site {
           siteMetadata {
             title
+            siteUrl
           }
         }
         logo: allImageSharp(filter: {fields: { slug: { regex: "/logo/"} }}) {
@@ -78,7 +78,11 @@ const Layout = ({ children, location }) => (
           `}
         />
         <Container>
-          <SideNav siteTitle={data.site.siteMetadata.title} logo={data.logo.nodes[0].fixed} />
+          <SideNav
+            siteTitle={data.site.siteMetadata.title}
+            logo={data.logo.nodes[0].fixed}
+            siteUrl={data.site.siteMetadata.siteUrl}
+          />
           <PageBody>
             <Transition location={location || ""}>{children}</Transition>
           </PageBody>
