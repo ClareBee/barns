@@ -134,13 +134,13 @@ const Sidenav = ({ siteTitle, siteUrl, theme, logo }) => (
       <ListLink theme={theme} to="/" siteUrl={siteUrl}>
         Gallery
       </ListLink>
-      <ListLink theme={theme} to="/sketches/">
+      <ListLink theme={theme} to="/sketches/" siteUrl={siteUrl}>
         Sketches
       </ListLink>
-      <ListLink theme={theme} to="/about/">
+      <ListLink theme={theme} to="/about/" siteUrl={siteUrl}>
         About
       </ListLink>
-      <ListLink theme={theme} to="/contact/">
+      <ListLink theme={theme} to="/contact/" siteUrl={siteUrl}>
         Contact
       </ListLink>
     </List>
