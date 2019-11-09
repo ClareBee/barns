@@ -8,7 +8,7 @@ const config = {
     headline: `Disappearing barns in the Yorkshire Dales`, // Headline for schema.org JSONLD
     author: `@clarie_bee`,
     url: `https://www.disappearingbarns.co.uk`, // site domain, no trailing slash
-    image: `src/static/logo.jpg`,
+    image: `https://res.cloudinary.com/dbhyay1ue/image/upload/v1573312835/logo_qpo3gd.jpg`,
     banner: ``, // used for SEO
     ogLanguage: `en_GB`,
     siteLanguage: `en`,
