@@ -1,3 +1,7 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/12fbe657-7b4d-4578-86fd-0f7926ea55c2/deploy-status)](https://app.netlify.com/sites/keen-joliot-3fa315/deploys)
+
+[![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
+
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**
