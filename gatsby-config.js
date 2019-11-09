@@ -1,6 +1,5 @@
 
 const config = {
-  // pathPrefix: '/', // prefix for all links
   siteMetadata: {
     title: `Disappearing Barns`,
     titleAlt: `Dales Barns`, // title for JSONLD
@@ -31,12 +30,13 @@ const config = {
         head: true,
         anonymize: true,
         // Avoids sending pageview hits from custom paths
-        exclude: ["/contact"],
+        exclude: ["/contact/"],
         // Delays sending pageview hits on route update (in milliseconds)
         pageTransitionDelay: 250
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-netlify`,
     {
     resolve: `gatsby-plugin-layout`,
       options: {
