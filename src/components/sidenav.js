@@ -12,14 +12,10 @@ const MenuLink = styled.li`
   font-size: 1.5rem;
   a {
     text-decoration: none;
+    background: transparent;
   }
   a:hover {
     color: #89868d;
-  }
-  a:active {
-    text-decoration: none;
-    background: transparent;
-    color: ${props => props.theme.colors.mountbattenPink};
   }
 `
 

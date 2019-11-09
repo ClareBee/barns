@@ -8,7 +8,7 @@ const config = {
     headline: `Disappearing barns in the Yorkshire Dales`, // Headline for schema.org JSONLD
     author: `@clarie_bee`,
     url: `https://www.disappearingbarns.co.uk`, // site domain, no trailing slash
-    image: `/logo2.png`,
+    image: `src/static/logo2.png`,
     banner: ``, // used for SEO
     ogLanguage: `en_GB`,
     siteLanguage: `en`,
@@ -16,7 +16,7 @@ const config = {
     copyrightHolder: 'Margaret Blackburne',
     copyrightYear: '2019',
     isFamilyFriendly: true,
-    keywords: ['Yorkshire', 'barns', 'National Park', 'art', 'watercolour', 'artist', 'Margaret Blackburne', 'Dales'],
+    keywords: ['Yorkshire', 'barns', 'National Park', 'watercolour', 'artist', 'Margaret Blackburne', 'Dales'],
     thumbnailUrl: ``,
     instagram: ``,
     googleAnalyticsID: `UA-151661826-1`,

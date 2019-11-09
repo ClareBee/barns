@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import { css } from "@emotion/core"
 import Img from "gatsby-image"
+import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import Map from "../components/Map"
 
@@ -44,6 +45,8 @@ export default ({ data }) => {
       `}
     >
       <div css={header}>
+        <SEO title={barn.name} description={`Painting of ${barn.name}`} />
+
         <Header title={barn.name} />
       </div>
       <Img

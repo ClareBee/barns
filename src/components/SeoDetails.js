@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         rel: `canonical`,
         href: site.siteMetadata.siteUrl
       }]}
-      titleTemplate={`%s | ${metaTitle}`}
+      titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           charSet: `utf-8`,
@@ -88,6 +88,14 @@ function SEO({ description, lang, meta, keywords, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: site.siteMetadata.image,
+        },
+        {
+          name: `twitter:image:alt`,
+          content: `Sketch of Yorskhire Barn`,
         },
       ]
         .concat(
