@@ -6,7 +6,7 @@ import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import { withTheme } from "emotion-theming"
 
-const MenuLink = styled.li`
+const menuLink = css`
   margin-right: 1rem;
   font-weight: bold;
   font-size: 1.5rem;
@@ -17,17 +17,22 @@ const MenuLink = styled.li`
   a:hover {
     color: #89868d;
   }
+  a:active {
+    text-decoration: none;
+    background: transparent;
+    color: #A2708A;
+  }
 `
 
 const ListLink = props => (
-  <MenuLink>
+  <li css={menuLink}>
     <Link
       to={props.to}
       activeStyle={{ color: `${props.theme.colors.mountbattenPink}` }}
     >
       {props.children}
     </Link>
-  </MenuLink>
+  </li>
 )
 
 const NavHeader = styled.header`
