@@ -92,7 +92,7 @@ const headerLink = css`
 const Sidenav = ({ siteTitle, siteUrl, theme, logo }) => (
   <Aside>
     <NavHeader>
-      <Link to="/gallery/" css={headerLink}>
+      <Link to="/" css={headerLink}>
         {siteTitle}
       </Link>
       <Img
@@ -109,7 +109,7 @@ const Sidenav = ({ siteTitle, siteUrl, theme, logo }) => (
 
     </NavHeader>
     <List>
-      <ListLink theme={theme} to="/gallery/" >
+      <ListLink theme={theme} to="/" >
         Gallery
       </ListLink>
       <ListLink theme={theme} to="/sketches/">
