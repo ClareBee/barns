@@ -89,7 +89,7 @@ const headerLink = css`
   }
 `
 
-const Sidenav = ({ siteTitle, siteUrl, theme, logo }) => (
+const Sidenav = ({ siteTitle, theme, logo }) => (
   <Aside>
     <NavHeader>
       <Link to="/" css={headerLink}>
@@ -106,7 +106,6 @@ const Sidenav = ({ siteTitle, siteUrl, theme, logo }) => (
           margin-right: 20px;
         `}
       />
-
     </NavHeader>
     <List>
       <ListLink theme={theme} to="/" >

@@ -25,7 +25,6 @@ exports.onCreateWebpackConfig = ({ stage, rules, loaders, actions }) => {
 exports.onCreateNode = ({ node, getNode, actions }) => {
   // createNodeField allows additional fields on nodes created by other apis
   const { createNodeField } = actions
-  console.log(node.internal.type)
   if(node.internal.type === `ImageSharp`) {
     // getNode traverses 'node graph' to get to parent File node
     const slug = createFilePath({ node, getNode, basePath: `images` })
