@@ -98,6 +98,10 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:image:alt`,
           content: `Sketch of Yorskhire Barn`,
         },
+        {
+          name: `p:domain_verify`,
+          content: `79adb99de8c4e5a5d72d9d2cdba4598b`
+        },
       ]
         .concat(
           keywords.length > 0
