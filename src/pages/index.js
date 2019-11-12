@@ -24,11 +24,10 @@ const Gallery = props => {
           margin: 75px 0;
           @media (max-width: ${props.theme.breakpoints.lg}) {
             grid-template-columns: 1fr;
-            grid-gap: 50px;
+            grid-gap: 30px;
           }
           @media (max-width: ${props.theme.breakpoints.md}) {
             grid-template-columns: 1fr;
-            grid-gap: 10px;
             margin: 15px 0;
           }
         `}

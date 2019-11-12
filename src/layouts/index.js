@@ -18,7 +18,7 @@ const Container = styled.div`
     grid-template-columns: 1fr;
   }
 `
-const PageBody = styled.main`
+const PageBody = styled.div`
   padding: 40px 100px;
   @media (min-width: calc(1000px + 1px)) {
     grid-column-start: 2;
