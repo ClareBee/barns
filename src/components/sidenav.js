@@ -47,7 +47,7 @@ const NavHeader = styled.header`
 const Aside = styled.aside`
   box-sizing: border-box;
   position: fixed;
-  height: 100%;
+  height: 100vh;
   width: 375px;
   display: flex;
   flex-flow: column nowrap;
@@ -58,6 +58,7 @@ const Aside = styled.aside`
   overflow: scroll;
   @media (max-width: 1000px) {
     position: relative;
+    height: auto;
     width: 100%;
     overflow: visible;
     padding-bottom: 5px;
