@@ -9,13 +9,19 @@ const Header = ({ title, subtitle, lead }) => (
         css={css`
           font-size: 1.5rem;
           display: inline-block;
+          line-height: 1.75rem;
         `}
       >
         {subtitle}
       </h3>
     )}
     {lead && (
-      <h4>{lead}</h4>
+      <h4 css={css`
+        line-height: 1.75rem;
+        @media (max-width: 1000px) {
+          margin-bottom: 5px;
+        }
+      `}>{lead}</h4>
     )}
   </React.Fragment>
 )

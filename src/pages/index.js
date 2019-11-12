@@ -26,6 +26,11 @@ const Gallery = props => {
             grid-template-columns: 1fr;
             grid-gap: 50px;
           }
+          @media (max-width: ${props.theme.breakpoints.md}) {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;
+            margin: 15px 0;
+          }
         `}
       >
         {barns.map(barn => (

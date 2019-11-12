@@ -56,11 +56,11 @@ const Aside = styled.aside`
   background: white;
   border-right: 2px solid ${props => props.theme.colors.lightGrey};
   overflow: scroll;
-
   @media (max-width: 1000px) {
     position: relative;
     width: 100%;
     overflow: visible;
+    padding-bottom: 5px;
   }
 `
 
@@ -69,6 +69,9 @@ const List = styled.ul`
   float: right;
   text-align: right;
   margin-right: -10px;
+  @media (max-width: 1000px) {
+    margin-bottom: 0;
+  }
 `
 
 const headerLink = css`
