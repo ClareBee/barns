@@ -76,18 +76,21 @@ const List = styled.ul`
 `
 
 const headerLink = css`
-  color: #fdfdff;
-  background-color: #565656;
+  color: grey;
   font-size: 2.5rem;
   font-family: "Avenir Next";
   font-weight: bold;
-  color: transparent;
   text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.4);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  @supports (background-clip: text) or (-webkit-background-clip: text) or (-moz-background-clip: text){
+    color: #fdfdff;
+    background-color: #565656;
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+  }
   &:hover {
     color: #627264;
   }

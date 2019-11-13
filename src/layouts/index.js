@@ -20,10 +20,18 @@ const Container = styled.div`
 `
 const PageBody = styled.div`
   padding: 40px 100px;
-  @media (min-width: calc(1000px + 1px)) {
-    grid-column-start: 2;
+  float: right;
+  max-width: 70%;
+  @supports(display: grid){
+    max-width: 100%;
+    clear: both;
+    @media (min-width: calc(1000px + 1px)) {
+      grid-column-start: 2;
+    }
   }
   @media (max-width: 1000px) {
+    float: none;
+    max-width: 100%;
     padding: 5px 25px;
   }
 `

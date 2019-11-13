@@ -6,10 +6,12 @@ import { withTheme } from "emotion-theming"
 
 const Container = styled.div`
   display: grid;
+  /* -ms-grid-columns: repeat(3, 1fr); */
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
   margin-bottom: 10px;
   @media (max-width: ${props => props.theme.breakpoints.lg}) {
+    /* -ms-grid-columns: repeat(2, 1fr); */
     grid-template-columns: repeat(2, 1fr);
   }
 `

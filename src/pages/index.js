@@ -18,17 +18,24 @@ const Gallery = props => {
       />
       <div
         css={css`
-          display: grid;
-          grid-template-columns: 550px 1fr;
-          grid-gap: 100px;
-          margin: 75px 0;
-          @media (max-width: ${props.theme.breakpoints.lg}) {
-            grid-template-columns: 1fr;
-            grid-gap: 30px;
+          width: 500px;
+          @media (max-width: ${props.theme.breakpoints.md}){
+            width: 100%;
           }
-          @media (max-width: ${props.theme.breakpoints.md}) {
-            grid-template-columns: 1fr;
-            margin: 15px 0;
+          @supports(display: grid){
+            width: auto;
+            display: grid;
+            grid-template-columns: 550px 1fr;
+            grid-gap: 100px;
+            margin: 75px 0;
+            @media (max-width: ${props.theme.breakpoints.lg}) {
+              grid-template-columns: 1fr;
+              grid-gap: 30px;
+            }
+            @media (max-width: ${props.theme.breakpoints.md}) {
+              grid-template-columns: 1fr;
+              margin: 15px 0;
+            }
           }
         `}
       >
