@@ -36,7 +36,7 @@ const Textarea = styled.textarea`
   border-radius: 5px;
   font-size: 1.25rem;
   line-height: 2rem;
-  margin: 5px;
+  margin: 10px 5px;
   width: 100%;
   height: 200px;
   color: ${props => props.theme.colors.olive};

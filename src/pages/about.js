@@ -77,7 +77,7 @@ const About = props => (
       alt="Sketchbook"
       css={css`
         width: 400px;
-        margin: 25px 0;
+        margin: 20px 0;
         box-shadow: ${props.theme.boxShadow};
         border-radius: 5px;
         @media (max-width: ${props.theme.breakpoints.sm}) {
@@ -96,12 +96,11 @@ const About = props => (
       </p>
       <p>
         Over the years, I have painted many of the barns in the Dales and have
-        become increasingly concerned about the disappearance and decay of many. I have been gradually putting together a collection of
-        paintings and sketches as a record of their existence and disappearance.
+        become increasingly concerned about their disappearance and decay. I have gradually been putting together a collection of
+        paintings and sketches as a record of their existence.
       </p>
       <p>
-        This website is intended as an ongoing project to share this collection
-        with a wider audience, so that others may also witness this changing
+        This website is intended as an ongoing project to share this with a wider audience, so that others may also witness this changing
         history.
         <QuotationMark>&#8221;</QuotationMark>
       </p>
@@ -117,7 +116,7 @@ const About = props => (
     <Section id="project">
       <h2>Disappearing Barns - The Yorkshire Dales</h2>
       <Text>
-        There are roughly <strong><a href="https://www.yorkshirepost.co.uk/news/analysis/barns-reborn-in-the-dales-1-2330175" target="_blank" rel="noopener noreferrer">4,500 barns</a></strong> dotted around the Yorkshire Dales, most them built between the 17th and 18th centuries.
+        There are roughly <strong><a href="https://www.yorkshirepost.co.uk/news/analysis/barns-reborn-in-the-dales-1-2330175" target="_blank" rel="noopener noreferrer">4,500 barns</a></strong> dotted around the Yorkshire Dales, most built between the 17<sup>th</sup> and 18<sup>th</sup> centuries.
       </Text>
       <p>
          Field barns - also known as <strong>laithes</strong> - are unusual in being located far from other farm buildings, making them a distinctive feature of the Dales landscape. Darkened slate roofs in the rain, walls bleached light in sunshine, their very presence seems attuned with the weather, somewhere mid-way between man-made and organic.
@@ -138,10 +137,10 @@ const About = props => (
         font-weight: bold;`}>— Peter Walker, <cite>North Craven Heritage Trust, 1992</cite></footer>
       </blockquote>
       <p>
-        While some barns are still in active use, many others have fallen into disrepair, crumbling a little further with each passing year. Still others have been converted into houses, raising <strong><a href="https://www.yorkshirepost.co.uk/news/latest-news/contentious-yorkshire-dales-barn-conversion-plans-rejected-at-tense-meeting-1-9488215" target="_blank" rel="noopener noreferrer">some tension</a></strong> between a desire to maintain traditional farming practices and the need to provide affordable housing for locals.
+        While some barns are still in active use, many have fallen into disrepair, crumbling a little further with each passing year. Still others have been converted into houses, raising <strong><a href="https://www.yorkshirepost.co.uk/news/latest-news/contentious-yorkshire-dales-barn-conversion-plans-rejected-at-tense-meeting-1-9488215" target="_blank" rel="noopener noreferrer">some tension</a></strong> between a desire to maintain traditional farming practices and the need to provide affordable housing for locals.
       </p>
       <p>
-        This project aims to capture these barns at various points in time. Some of those featured have already completely collapsed - and, while there are efforts by the <strong><a href="https://www.yorkshiredales.org.uk/about/national-park-management-plan/a-cultural-landscape/objective-a9/" target="_blank" rel="noopener noreferrer">Yorkshire Dales National Park</a></strong> to fund their preservation, for many it is unfortunately already too late.
+        This project aims to capture these barns at various points in time. Some of those featured have already completely collapsed - and, while there are efforts by the <strong><a href="https://www.yorkshiredales.org.uk/about/national-park-management-plan/a-cultural-landscape/objective-a9/" target="_blank" rel="noopener noreferrer">Yorkshire Dales National Park</a></strong> to fund their preservation, for many it is unfortunately too late.
       </p>
       <a href="#top">Top</a>
     </Section>

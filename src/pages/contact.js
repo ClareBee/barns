@@ -78,7 +78,7 @@ const Contact = props => (
         border-left: 5px solid ${props.theme.colors.lightGreyGreen};
         @media (max-width: 1300px) {
           grid-column-start: 1;
-          margin-top: 40px;
+          margin-top: 2rem;
         }
       `}
     >
