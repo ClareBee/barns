@@ -91,6 +91,45 @@
     "description": "Just south of Angram. Both barns starting to go."
   },
   {
+    "id": "1677771511187112573",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Helwith Bridge Barns",
+    "slug": "/barn_near_helwith_bridge/",
+    "image": {
+      "src": "../images/barn_near_helwith_bridge.jpg"
+    },
+    "lat": 54.123290,
+    "long": -2.288794,
+    "description": "By the river near Helwith Bridge. The roof has now totally collapsed."
+  },
+  {
+    "id": "1677771511187112574",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Wenslydale Barns",
+    "slug": "/wensleydale_barns/",
+    "image": {
+      "src": "../images/wensleydale_barns.jpg"
+    },
+    "lat": 54.301254,
+    "long": -2.212990,
+    "description": "On B6255 above Hawes."
+  },
+  {
+    "id": "1677771511187112575",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Stangill Barn",
+    "slug": "/stangill_barn/",
+    "image": {
+      "src": "../images/stangill_barn.jpg"
+    },
+    "lat": 54.114424,
+    "long": -2.178598,
+    "description": "On the road to Darnbrook."
+  },
+  {
     "id": "1677771511187112571",
     "format": "sketch",
     "type": "GraphImage",
@@ -115,5 +154,57 @@
     "lat": 54.118936,
     "long": -2.330497,
     "description": "Cross Streets Barn"
+  },
+  {
+    "id": "1677771511187112576",
+    "format": "sketch",
+    "type": "GraphImage",
+    "name": "Tommy Bank Barn",
+    "slug": "/tommy_bank_barn/",
+    "image": {
+      "src": "../images/tommy_bank_barn.jpg"
+    },
+    "lat": 54.114353,
+    "long": -2.351655,
+    "description": "Tommy Bank Barn. By road out of Austwick. Now a house."
+  },
+  {
+    "id": "1677771511187112577",
+    "format": "sketch",
+    "type": "GraphImage",
+    "name": "Austwick Barn",
+    "slug": "/austwick_barn/",
+    "image": {
+      "src": "../images/austwick_barn.jpg"
+    },
+    "lat": 54.104417,
+    "long": -2.349834,
+    "description": "Austwick Barn"
+  },
+  {
+    "id": "1677771511187112578",
+    "format": "sketch",
+    "type": "GraphImage",
+    "name": "Slaindale Barn",
+    "slug": "/slaindale_barn/",
+    "image": {
+      "src": "../images/slaindale_barn.jpg"
+    },
+    "lat": 54.118517,
+    "long": -2.347384,
+    "description": "Slaindale Barn. Between Austwick and Wharfe."
+  },
+  {
+    "id": "1677771511187112579",
+    "format": "sketch",
+    "type": "GraphImage",
+    "name": "Crow Nest Barns",
+    "slug": "/crow_nest_barns/",
+    "image": {
+      "src": "../images/crow_nest_barns.jpg"
+    },
+    "lat": 54.098541,
+    "long": -2.336934,
+    "description": "Crow Nest Barns. Now the Courtyard Dairy on the A65."
   }
 ]
