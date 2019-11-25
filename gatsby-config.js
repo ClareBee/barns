@@ -3,7 +3,7 @@ const config = {
   siteMetadata: {
     title: `Disappearing Barns`,
     titleAlt: `Dales Barns`, // title for JSONLD
-    description: `Painting of Disappearing Barns in the Yorkshire Dales by Margaret Blackburne`,
+    description: `Paintings of Disappearing Barns in the Yorkshire Dales by Margaret Blackburne`,
     headline: `Disappearing barns in the Yorkshire Dales`, // Headline for schema.org JSONLD
     author: `@clarie_bee`,
     url: `https://www.disappearingbarns.co.uk`, // site domain, no trailing slash
