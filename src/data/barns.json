@@ -60,6 +60,9 @@
     "image": {
       "src": "../images/sunny_bank_barn.jpg"
     },
+    "photo": {
+      "src": "../images/little_sunny_bank_photo.jpg"
+    },
     "lat": 54.115436,
     "long": -2.293750,
     "description": "The wall and roof are now starting to crumble."
@@ -86,6 +89,9 @@
     "image": {
       "src": "../images/angram_barns.jpg"
     },
+    "photo": {
+      "src": "../images/angram_photo.jpg"
+    },
     "lat": 54.391351,
     "long": -2.172543,
     "description": "Just south of Angram. Both barns starting to go."
@@ -99,6 +105,9 @@
     "image": {
       "src": "../images/barn_near_helwith_bridge.jpg"
     },
+    "photo": {
+      "src": "../images/helwith_photo.jpg"
+    },
     "lat": 54.123290,
     "long": -2.288794,
     "description": "By the river near Helwith Bridge. The roof has now totally collapsed."
@@ -107,10 +116,13 @@
     "id": "1677771511187112574",
     "format": "painting",
     "type": "GraphImage",
-    "name": "Wenslydale Barns",
+    "name": "Wensleydale Barns",
     "slug": "/wensleydale_barns/",
     "image": {
       "src": "../images/wensleydale_barns.jpg"
+    },
+    "photo": {
+      "src": "../images/wensleydale_photo.jpg"
     },
     "lat": 54.301254,
     "long": -2.212990,
