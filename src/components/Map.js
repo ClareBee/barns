@@ -9,9 +9,9 @@ export default class MyMap extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      lat: 54.1275990177612,
-      lng: -2.43310303309547,
-      zoom: 10,
+      lat: 54.126188,
+      lng: -2.170927,
+      zoom: 9,
       name: "",
       markers: [],
       singleBarn: false,
