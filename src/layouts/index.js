@@ -12,27 +12,39 @@ import SiteFooter from "../components/Footer"
 
 const Container = styled.div`
   height: 100vh;
-  display: grid;
-  grid-template-columns: 375px 1fr;
-  @media (max-width: 1000px) {
-    grid-template-columns: 1fr;
+  @supports(display: grid){
+    display: grid;
+    grid-template-columns: 375px 1fr;
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
   }
 `
 const PageBody = styled.div`
   padding: 40px 100px;
-  float: right;
-  max-width: 70%;
+  width: 750px;
+  position: absolute;
+  left: 35%;
+  @media (max-width: 1000px) {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 5px 25px;
+  }
   @supports(display: grid){
+    position: relative;
+    left: 0;
+    width: auto;
     max-width: 100%;
     clear: both;
+    @media (max-width: 1000px) {
+      position: relative;
+      left: 0;
+    }
     @media (min-width: calc(1000px + 1px)) {
+      position: relative;
       grid-column-start: 2;
     }
-  }
-  @media (max-width: 1000px) {
-    float: none;
-    max-width: 100%;
-    padding: 5px 25px;
   }
 `
 
