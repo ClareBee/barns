@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from "@emotion/styled"
 import { css } from "@emotion/core"
 import Img from "gatsby-image"
 import SEO from "../components/SeoDetails"
@@ -88,13 +87,6 @@ const partialGrid= css`
         "map map map .";
     }
   }
-`
-
-const Divider = styled.hr`
-  width: 100%;
-  height: 5px;
-  opacity: 0.7;
-  background-color: ${props => props.theme.colors.mountbattenPink};
 `
 
 export default ({ data }) => {

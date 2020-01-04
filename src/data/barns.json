@@ -1,6 +1,6 @@
 [
   {
-    "id": "1685001452849004064",
+    "id": "1685001452849004060",
     "format": "painting",
     "type": "GraphImage",
     "name": "Newby Barn",
@@ -13,46 +13,7 @@
     "description": "Located just off the A65. Used to be a house and barn together. Now almost completely collapsed."
   },
   {
-    "id": "1685001452849004065",
-    "type": "GraphImage",
-    "format": "painting",
-    "name": "Thoragill Barn",
-    "slug": "/thoragill_barn/",
-    "image": {
-      "src": "../images/thoragill_barn.jpg"
-    },
-    "lat": 54.126188,
-    "long": -2.170927,
-    "description": "In Arncliffe."
-  },
-  {
-    "id": "1677771511187112566",
-    "format": "painting",
-    "type": "GraphImage",
-    "name": "Stainforth Barns",
-    "slug": "/stainforth_barns/",
-    "image": {
-      "src": "../images/stainforth_barns.jpg"
-    },
-    "lat": 54.107357,
-    "long": -2.289104,
-    "description": "Above Little Stainforth. Low House Barn and Leys barn. The roofs on both are starting to collapse."
-  },
-  {
-    "id": "1677771511187112567",
-    "type": "GraphImage",
-    "format": "painting",
-    "name": "Husband's Barn",
-    "slug": "/husbands_barn/",
-    "image": {
-      "src": "../images/husbands_barn.jpg"
-    },
-    "lat": 54.093015,
-    "long": -2.272184,
-    "description": "On B6479 between Settle and Stainforth. Now a private house."
-  },
-  {
-    "id": "1677771511187112568",
+    "id": "1677771511187112561",
     "format": "painting",
     "type": "GraphImage",
     "name": "Little Sunny Bank Barn",
@@ -68,7 +29,65 @@
     "description": "The wall and roof are now starting to crumble."
   },
   {
-    "id": "1677771511187112569",
+    "id": "1685001452849004062",
+    "type": "GraphImage",
+    "format": "painting",
+    "name": "Bainbridge Barn",
+    "slug": "/bainbridge_barn/",
+    "image": {
+      "src": "../images/bainbridge_barn.jpg"
+    },
+    "photo": {
+      "src": "../images/bainbridge_photo.jpg"
+    },
+    "lat": 54.303766,
+    "long": -2.098316,
+    "description": "In a field just south of Bainbridge."
+  },
+  {
+    "id": "1685001452849004063",
+    "type": "GraphImage",
+    "format": "painting",
+    "name": "Thoragill Barn",
+    "slug": "/thoragill_barn/",
+    "image": {
+      "src": "../images/thoragill_barn.jpg"
+    },
+    "photo": {
+      "src": "../images/thoragill_photo.jpg"
+    },
+    "lat": 54.126188,
+    "long": -2.170927,
+    "description": "In Arncliffe."
+  },
+  {
+    "id": "1677771511187112565",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Littondale Barn",
+    "slug": "/littondale_barn/",
+    "image": {
+      "src": "../images/littondale_barn.jpg"
+    },
+    "lat": 54.107357,
+    "long": -2.289104,
+    "description": "Location TBC"
+  },
+  {
+    "id": "1677771511187112566",
+    "type": "GraphImage",
+    "format": "painting",
+    "name": "Husband's Barn",
+    "slug": "/husbands_barn/",
+    "image": {
+      "src": "../images/husbands_barn.jpg"
+    },
+    "lat": 54.093015,
+    "long": -2.272184,
+    "description": "On B6479 between Settle and Stainforth. Now a private house."
+  },
+  {
+    "id": "1677771511187112567",
     "format": "painting",
     "type": "GraphImage",
     "name": "Wharfe Barn",
@@ -78,10 +97,10 @@
     },
     "lat": 54.118936,
     "long": -2.330497,
-    "description": ""
+    "description": "Near Wharfe."
   },
   {
-    "id": "1677771511187112570",
+    "id": "1677771511187112568",
     "format": "painting",
     "type": "GraphImage",
     "name": "Angram Barns",
@@ -97,7 +116,20 @@
     "description": "Just south of Angram. Both barns starting to go."
   },
   {
-    "id": "1677771511187112573",
+    "id": "1677771511187112569",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Meregill House and Barn",
+    "slug": "/meregill_house_barn/",
+    "image": {
+      "src": "../images/meregill_house_barn.jpg"
+    },
+    "lat": 54.118936,
+    "long": -2.330497,
+    "description": "Location TBC"
+  },
+  {
+    "id": "1677771511187112570",
     "format": "painting",
     "type": "GraphImage",
     "name": "Helwith Bridge Barns",
@@ -113,7 +145,39 @@
     "description": "By the river near Helwith Bridge. The roof has now totally collapsed."
   },
   {
-    "id": "1677771511187112574",
+    "id": "1677771511187112571",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Eldroth Barn",
+    "slug": "/eldroth_barn/",
+    "image": {
+      "src": "../images/eldroth_barn.jpg"
+    },
+    "photo": {
+      "src": "../images/eldroth_photo.jpg"
+    },
+    "lat": 54.069551,
+    "long": -2.374342,
+    "description": "Location TBC"
+  },
+  {
+    "id": "1677771511187112572",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Eldroth Barn",
+    "slug": "/eldroth_barn_2/",
+    "image": {
+      "src": "../images/eldroth_barn_2.jpg"
+    },
+    "photo": {
+      "src": "../images/eldroth_photo.jpg"
+    },
+    "lat": 54.069551,
+    "long": -2.374342,
+    "description": "Location TBC"
+  },
+  {
+    "id": "1677771511187112573",
     "format": "painting",
     "type": "GraphImage",
     "name": "Wensleydale Barns",
@@ -129,6 +193,38 @@
     "description": "On B6255 above Hawes."
   },
   {
+    "id": "1677771511187112574",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Dugdale Barn",
+    "slug": "/dugdale_barn/",
+    "image": {
+      "src": "../images/dugdale_barn.jpg"
+    },
+    "photo": {
+      "src": "../images/dugdale_photo.jpg"
+    },
+    "lat": 54.301254,
+    "long": -2.212990,
+    "description": "Near Stainforth"
+  },
+  {
+    "id": "1677771511187112550",
+    "format": "painting",
+    "type": "GraphImage",
+    "name": "Stainforth Barns",
+    "slug": "/stainforth_barns/",
+    "image": {
+      "src": "../images/stainforth_barns.jpg"
+    },
+    "photo": {
+      "src": "../images/dugdale_photo.jpg"
+    },
+    "lat": 54.301254,
+    "long": -2.212990,
+    "description": "Near Stainforth"
+  },
+  {
     "id": "1677771511187112575",
     "format": "painting",
     "type": "GraphImage",
@@ -137,12 +233,15 @@
     "image": {
       "src": "../images/stangill_barn.jpg"
     },
+    "photo": {
+      "src": "../images/stangill_photo.jpg"
+    },
     "lat": 54.114424,
     "long": -2.178598,
     "description": "On the road to Darnbrook."
   },
   {
-    "id": "1677771511187112571",
+    "id": "1677771511187112576",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Crow Nest Barn",
@@ -155,7 +254,7 @@
     "description": "Crow Nest Barn"
   },
   {
-    "id": "1677771511187112572",
+    "id": "1677771511187112577",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Cross Streets Barn",
@@ -168,7 +267,7 @@
     "description": "Cross Streets Barn"
   },
   {
-    "id": "1677771511187112576",
+    "id": "1677771511187112578",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Tommy Bank Barn",
@@ -181,7 +280,7 @@
     "description": "Tommy Bank Barn. By road out of Austwick. Now a house."
   },
   {
-    "id": "1677771511187112577",
+    "id": "1677771511187112579",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Austwick Barn",
@@ -194,7 +293,7 @@
     "description": "Austwick Barn"
   },
   {
-    "id": "1677771511187112578",
+    "id": "1677771511187112580",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Slaindale Barn",
@@ -207,7 +306,7 @@
     "description": "Slaindale Barn. Between Austwick and Wharfe."
   },
   {
-    "id": "1677771511187112579",
+    "id": "1677771511187112581",
     "format": "sketch",
     "type": "GraphImage",
     "name": "Crow Nest Barns",
