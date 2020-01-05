@@ -1,7 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
-import { css } from "@emotion/core"
+import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+
+import { css } from "@emotion/core"
+
 import SEO from "../components/SeoDetails"
 import Header from "../components/Header"
 import Map from "../components/Map"
@@ -89,6 +91,19 @@ const partialGrid= css`
   }
 `
 
+const backButton = css`
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  text-decoration: none;
+  width: max-content;
+  margin-bottom: 1.5rem;
+  span {
+    font-size: 1.25rem;
+    margin-right: .5rem;
+  }
+`
+
 export default ({ data }) => {
   const barn = data.barnsJson
   return (
@@ -98,8 +113,11 @@ export default ({ data }) => {
 
       <div css={header}>
         <SEO title={barn.name} description={`Painting of ${barn.name}`} />
-
+        <Link to='/' css={backButton}>
+          <span>&larr;</span> Gallery
+        </Link>
         <Header title={barn.name} />
+
       </div>
       <Img
         fluid={barn.image.src.childImageSharp.fluid}
