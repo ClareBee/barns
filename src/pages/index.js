@@ -6,6 +6,11 @@ import Header from "../components/Header"
 import { css } from "@emotion/core"
 import { withTheme } from "emotion-theming"
 
+const gridSupportMsg = css`
+  @supports (display: grid) {
+    display: none;
+  }
+`
 const Gallery = props => {
   const barns = props.data.allBarnsJson.edges
   return (
@@ -14,8 +19,13 @@ const Gallery = props => {
       <Header
         title="Gallery"
         subtitle="Barns in the Yorkshire Dales"
-        lead="A series of paintings by Margaret Blackburne"
+        lead="A series of paintings by Margaret Blackburne. Click on each image to discover more."
       />
+      <div css={gridSupportMsg}>
+        <p>
+           This site is best viewed on an up-to-date browser. <a target="_blank" href="https://www.whatismybrowser.com/" rel="noopener noreferrer">www.whatismybrowser.com</a>
+        </p>
+      </div>
       <div
         css={css`
           width: 500px;
