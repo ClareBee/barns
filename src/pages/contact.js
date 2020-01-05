@@ -11,8 +11,9 @@ import { withTheme } from "emotion-theming"
 
 const Container = styled.div`
   display: grid;
+  grid-gap: 25px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px);
   @media (max-width: ${props => props.theme.breakpoints.lg}) {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -68,7 +69,7 @@ const Contact = props => (
     />
     <div
       css={css`
-        grid-row-start: 5;
+        grid-row: 4 / 6;
         grid-column-start: 2;
         font-style: italic;
         font-weight: bold;
@@ -82,8 +83,7 @@ const Contact = props => (
         }
       `}
     >
-      The copyright notice which is displayed in this site indicates that all
-      materials within the site are the intellectual property of the artist
+      The copyright notice indicates that all materials within the site are the intellectual property of the artist
       Margaret Blackburne (MB). All materials, content and forms contained on
       this website are the intellectual property of MB and may not be copied,
       reproduced, distributed or displayed without MB’s express written

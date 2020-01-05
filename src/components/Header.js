@@ -3,10 +3,12 @@ import { css } from "@emotion/core"
 
 const Header = ({ title, subtitle, lead }) => (
   <React.Fragment>
-    <h1>{title}</h1>
+    <h1 css={css`margin-bottom: .5rem;`}>{title}</h1>
     {subtitle && (
       <h3
         css={css`
+          margin-top: 1rem;
+          margin-bottom: .5rem;
           font-size: 1.5rem;
           display: inline-block;
           line-height: 1.75rem;
@@ -17,10 +19,9 @@ const Header = ({ title, subtitle, lead }) => (
     )}
     {lead && (
       <h4 css={css`
+        color: #3A3C3F;
         line-height: 1.75rem;
-        @media (max-width: 1000px) {
-          margin-bottom: 5px;
-        }
+        margin-bottom: 1rem;
       `}>{lead}</h4>
     )}
   </React.Fragment>

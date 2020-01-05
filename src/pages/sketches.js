@@ -34,7 +34,7 @@ const Sketches = ({ data, location, theme }) => {
   return (
     <React.Fragment>
       <SEO title="Sketches" />
-      <Header title="Sketches" subtitle="A series of drawings in pen and ink, pencil and charcoal."/>
+      <Header title="Sketches" subtitle="Dales Barns" lead="A series of drawings in pen and ink, pencil and charcoal."/>
       <Rollerdeck barnImages={barns} selectImage={selectImage} />
 
       {showDialog && (
