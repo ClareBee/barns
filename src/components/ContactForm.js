@@ -66,15 +66,15 @@ const ContactForm = () => (
     <Input type="hidden" name="form-name" value="Contact Form" />
     <FormGroup>
       <Label>Your Email:</Label>
-      <Input type="email" name="email" />
+      <Input id="email" type="email" name="email" required />
     </FormGroup>
     <FormGroup>
       <Label>Subject:</Label>
-      <Input type="text" name="subject" />
+      <Input id="subject" type="text" name="subject" required />
     </FormGroup>
     <FormGroup>
       <Label>Message:</Label>
-      <Textarea name="message" />
+      <Textarea id="textarea" name="message" required />
     </FormGroup>
     <div>
       <small>
