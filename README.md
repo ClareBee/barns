@@ -14,9 +14,9 @@
   
 ---
 
-<img src="./homepage.jpg" alt="Screenshot of homepage" />
+<img src="./homepage.jpg" alt="Screenshot of homepage" width="450"/>
 
 ---
 
-<img src="./showpage.jpg" alt="Screenshot of homepage" />
+<img src="./showpage.jpg" alt="Screenshot of homepage" width="450"/>
 
