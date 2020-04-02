@@ -11,12 +11,12 @@
 - Contact Form with Netlify
 - Styling with Emotion
 - Google Analytics and SEO
-  
+- CSSGrid Layout
 ---
 
-<img src="./homepage.jpg" alt="Screenshot of homepage" width="450"/>
+<img src="./homepage.jpg" alt="Screenshot of homepage" width="650"/>
 
 ---
 
-<img src="./showpage.jpg" alt="Screenshot of homepage" width="450"/>
+<img src="./showpage.jpg" alt="Screenshot of homepage" width="650"/>
 
