@@ -6,10 +6,17 @@
 
 `npm start` launches app on `localhost:8000`
 
-<img src="./screenshot.jpg" alt="Screenshot of homepage" />
-
 ## Features
 - LeafletJS to show location of paintings
 - Contact Form with Netlify
 - Styling with Emotion
 - Google Analytics and SEO
+  
+---
+
+<img src="./homepage.jpg" alt="Screenshot of homepage" />
+
+---
+
+<img src="./showpage.jpg" alt="Screenshot of homepage" />
+
